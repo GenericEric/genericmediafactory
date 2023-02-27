@@ -1,0 +1,15 @@
+appName: radarr
+namespace: mediafactory
+
+image:
+  repository: linuxserver/radarr
+  tag: 4.3.2
+  imagePullPolicy: IfNotPresent
+
+env:
+  TZ: America/Chicago
+  PGID: 568
+  PUID: 568
+
+service:
+  port: 7878

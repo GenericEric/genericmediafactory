@@ -1,0 +1,9 @@
+apiVersion: v2
+name: radarr
+description: A fork of Sonarr to work with movies à la Couchpotato.
+appVersion: "4.3.2"
+type: application
+version: 0.1.0
+maintainers:
+  - name: GenericEric
+    email: eric@bgeneric.net

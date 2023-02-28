@@ -4,6 +4,12 @@ description: This application runs as a daemon on your download host. It checks 
 appVersion: "0.11"
 type: application
 version: 0.1.0
+keywords:
+  - unpackerr
+  - mediafactory
+  - torrent
+  - usenet
 maintainers:
   - name: GenericEric
     email: eric@bgeneric.net
+    url: https://bgeneric.net

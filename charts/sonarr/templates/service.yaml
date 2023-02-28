@@ -1,15 +1,20 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "sonarr.fullname" . }}
+  name: {{ .Values.appName }}
+  namespace: {{ .Values.namespace }}
   labels:
-    {{- include "sonarr.labels" . | nindent 4 }}
+    app:  {{ .Values.appName }}
 spec:
-  type: {{ .Values.service.type }}
-  ports:
-    - port: {{ .Values.service.port }}
-      targetPort: http
-      protocol: TCP
-      name: http
   selector:
-    {{- include "sonarr.selectorLabels" . | nindent 4 }}
+    app: {{ .Values.appName }}
+  type: ClusterIP
+  sessionAffinity: None
+  sessionAffinityConfig:
+    clientIP:
+      timeoutSeconds: 10800
+  ports:
+  - name: {{ .Values.appName }}
+    protocol: TCP
+    port: {{ .Values.service.port }}
+    targetPort: {{ .Values.service.port }}

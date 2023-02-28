@@ -4,6 +4,14 @@ description: A fork of Sonarr to work with movies à la Couchpotato.
 appVersion: "4.3.2"
 type: application
 version: 0.2.0
+keywords:
+  - radarr
+  - movies
+  - pvr
+  - mediafactory
+  - torrent
+  - usenet
 maintainers:
   - name: GenericEric
     email: eric@bgeneric.net
+    url: https://bgeneric.net

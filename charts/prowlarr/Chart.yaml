@@ -4,6 +4,13 @@ description: Prowlarr is a indexer manager/proxy built on the popular arr .net/r
 appVersion: "1.2.2"
 type: application
 version: 0.1.0
+keywords:
+  - prowlarr
+  - indexer
+  - mediafactory
+  - torrent
+  - usenet
 maintainers:
   - name: GenericEric
     email: eric@bgeneric.net
+    url: https://bgeneric.net

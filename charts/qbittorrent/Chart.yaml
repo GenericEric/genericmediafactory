@@ -4,6 +4,13 @@ description: qBittorrent is a cross-platform free and open-source BitTorrent cli
 appVersion: "4.5.1"
 type: application
 version: 0.2.0
+keywords:
+  - qbittorrent
+  - downloader
+  - mediafactory
+  - torrent
+  - usenet
 maintainers:
   - name: GenericEric
     email: eric@bgeneric.net
+    url: https://bgeneric.net

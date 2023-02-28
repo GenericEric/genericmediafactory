@@ -4,6 +4,14 @@ description: FlareSolverr is a proxy server to bypass Cloudflare protection
 appVersion: "3.0.2"
 type: application
 version: 0.1.0
+keywords:
+  - flaresolverr
+  - cloudflare
+  - proxy
+  - mediafactory
+  - torrent
+  - usenet
 maintainers:
   - name: GenericEric
     email: eric@bgeneric.net
+    url: https://bgeneric.net

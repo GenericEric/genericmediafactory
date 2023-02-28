@@ -13,3 +13,28 @@ env:
 
 service:
   port: 7878
+
+persistence:
+  config:
+    hostPath: /home/apps/radarr
+    mountPath: /config
+  backups:
+    hostPath: /mnt/nas/backups/radarr
+    mountPath: /backups
+  movies:
+    hostPath: /mnt/nas/movies
+    mountPath: /media/movies
+  downloads: 
+    hostPath: /mnt/nas/downloads
+    mountPath: /downloads
+  complete:
+    hostPath: /mnt/nas/complete
+    mountPath: /complete
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 50Mi
+  limits:
+    cpu: 4000m
+    memory: 2000Mi

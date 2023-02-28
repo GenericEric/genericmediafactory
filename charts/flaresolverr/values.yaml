@@ -1,0 +1,21 @@
+appName: flaresolverr
+namespace: mediafactory
+
+image:
+  repository: flaresolverr/flaresolverr
+  tag: v3.0.2
+  imagePullPolicy: IfNotPresent
+
+env:
+  TZ: America/Chicago
+
+service:
+  port: 8191
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 50Mi
+  limits:
+    cpu: 4000m
+    memory: 2000Mi

@@ -18,6 +18,9 @@ vpn:
   HEALTH_CHECK_HOST: one.one.one.one
   HEALTH_CHECK_INTERVAL: 300
 
+ingress:
+  host: qbittorrent.example.com
+
 service:
   port: 8080
 

@@ -1,0 +1,139 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  {{ .Values.appName }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app:  {{ .Values.appName }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Values.appName }}
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app:  {{ .Values.appName }}
+    spec:
+      containers:
+      - name:  {{ .Values.appName }}
+        image:  "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        imagePullPolicy: {{ .Values.image.imagePullPolicy }}
+        resources:
+          requests:
+            cpu: {{ .Values.resources.requests.cpu }}
+            memory: {{ .Values.resources.requests.memory }}
+          limits:
+            cpu: {{ .Values.resources.limits.cpu }}
+            memory: {{ .Values.resources.limits.memory }}
+        env:
+        - name: TZ
+          value: "{{ .Values.env.TZ }}"
+        - name: UN_RADARR_0_URL
+          value: "{{ .Values.radarr.URL }}"
+        - name: UN_RADARR_1_URL
+          value: "{{ .Values.radarr2.URL }}"
+        - name: UN_RADARR_0_API_KEY
+          value: "{{ .Values.radarr.API_KEY }}"
+        - name: UN_RADARR_1_API_KEY
+          value: "{{ .Values.radarr2.API_KEY }}"
+        - name: UN_RADARR_0_PATHS
+          value: "{{ .Values.radarr.PATHS }}"
+        - name: UN_RADARR_1_PATHS
+          value: "{{ .Values.radarr2.PATHS }}"
+        - name: UN_RADARR_0_DELETE_DELAY
+          value: "{{ .Values.radarr.DELETE_DELAY }}"
+        - name: UN_RADARR_1_DELETE_DELAY
+          value: "{{ .Values.radarr2.DELETE_DELAY }}"
+        - name: UN_RADARR_0_PROTOCOLS
+          value: "{{ .Values.radarr.PROTOCOLS }}"
+        - name: UN_RADARR_1_PROTOCOLS
+          value: "{{ .Values.radarr2.PROTOCOLS }}"
+        - name: UN_SONARR_0_URL
+          value: "{{ .Values.sonarr.URL }}"
+        - name: UN_SONARR_1_URL
+          value: "{{ .Values.sonarr2.URL }}"
+        - name: UN_SONARR_0_API_KEY
+          value: "{{ .Values.sonarr.API_KEY }}"
+        - name: UN_SONARR_1_API_KEY
+          value: "{{ .Values.sonarr2.API_KEY }}"
+        - name: UN_SONARR_0_PATHS
+          value: "{{ .Values.sonarr.PATHS }}"
+        - name: UN_SONARR_1_PATHS
+          value: "{{ .Values.sonarr2.PATHS }}"
+        - name: UN_SONARR_0_DELETE_DELAY
+          value: "{{ .Values.sonarr.DELETE_DELAY }}"
+        - name: UN_SONARR_1_DELETE_DELAY
+          value: "{{ .Values.sonarr2.DELETE_DELAY }}"
+        - name: UN_SONARR_0_PROTOCOLS
+          value: "{{ .Values.sonarr.PROTOCOLS }}"
+        - name: UN_SONARR_1_PROTOCOLS
+          value: "{{ .Values.sonarr2.PROTOCOLS }}"
+        - name: UN_LIDARR_0_URL
+          value: "{{ .Values.lidarr.URL }}"
+        - name: UN_LIDARR_1_URL
+          value: "{{ .Values.lidarr2.URL }}"
+        - name: UN_LIDARR_0_API_KEY
+          value: "{{ .Values.lidarr.API_KEY }}"
+        - name: UN_LIDARR_1_API_KEY
+          value: "{{ .Values.lidarr2.API_KEY }}"
+        - name: UN_LIDARR_0_PATHS
+          value: "{{ .Values.lidarr.PATHS }}"
+        - name: UN_LIDARR_1_PATHS
+          value: "{{ .Values.lidarr2.PATHS }}"
+        - name: UN_LIDARR_0_DELETE_DELAY
+          value: "{{ .Values.lidarr.DELETE_DELAY }}"
+        - name: UN_LIDARR_1_DELETE_DELAY
+          value: "{{ .Values.lidarr2.DELETE_DELAY }}"
+        - name: UN_LIDARR_0_PROTOCOLS
+          value: "{{ .Values.lidarr.PROTOCOLS }}"
+        - name: UN_LIDARR_1_PROTOCOLS
+          value: "{{ .Values.lidarr2.PROTOCOLS }}"
+        - name: UN_READARR_0_URL
+          value: "{{ .Values.readarr.URL }}"
+        - name: UN_READARR_1_URL
+          value: "{{ .Values.readarr2.URL }}"
+        - name: UN_READARR_0_API_KEY
+          value: "{{ .Values.readarr.API_KEY }}"
+        - name: UN_READARR_1_API_KEY
+          value: "{{ .Values.readarr2.API_KEY }}"
+        - name: UN_READARR_0_PATHS
+          value: "{{ .Values.readarr.PATHS }}"
+        - name: UN_READARR_1_PATHS
+          value: "{{ .Values.readarr2.PATHS }}"
+        - name: UN_READARR_0_DELETE_DELAY
+          value: "{{ .Values.readarr.DELETE_DELAY }}"
+        - name: UN_READARR_1_DELETE_DELAY
+          value: "{{ .Values.readarr2.DELETE_DELAY }}"
+        - name: UN_READARR_0_PROTOCOLS
+          value: "{{ .Values.readarr.PROTOCOLS }}"
+        - name: UN_READARR_1_PROTOCOLS
+          value: "{{ .Values.readarr2.PROTOCOLS }}"
+        ports:
+        - containerPort:  {{ .Values.service.port }}
+          name:  {{ .Values.appName }}
+        volumeMounts:
+        - name: movies
+          mountPath: {{ .Values.persistence.movies.mountPath }}
+        - name: series
+          mountPath: {{ .Values.persistence.series.mountPath }}
+        - name: music
+          mountPath: {{ .Values.persistence.music.mountPath }}
+        - name: books
+          mountPath: {{ .Values.persistence.books.mountPath }}
+      volumes:
+        - name: movies
+          hostPath:
+            path: {{ .Values.persistence.movies.hostPath }}
+        - name: series
+          hostPath:
+            path: {{ .Values.persistence.series.hostPath }}
+        - name: music
+          hostPath:
+            path: {{ .Values.persistence.music.hostPath }}
+        - name: books
+          hostPath:
+            path: {{ .Values.persistence.books.hostPath }}
+      restartPolicy: Always

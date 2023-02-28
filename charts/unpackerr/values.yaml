@@ -1,0 +1,85 @@
+appName: flaresolverr
+namespace: mediafactory
+
+image:
+  repository: golift/unpackerr
+  tag: 0.11
+  imagePullPolicy: IfNotPresent
+
+env:
+  TZ: America/Chicago
+
+radarr:
+  URL: radarr.mediafactory.svc.cluster.local:7878
+  API_KEY:
+  PATHS: /complete/movies
+  DELETE_DELAY:
+  PROTOCOLS: torrent
+radarr2:
+  URL:
+  API_KEY:
+  PATHS:
+  DELETE_DELAY:
+  PROTOCOLS:
+sonarr:
+  URL: sonarr.mediafactory.svc.cluster.local:8989
+  API_KEY:
+  PATHS: /complete/series
+  DELETE_DELAY:
+  PROTOCOLS: torrent
+sonarr2:
+  URL:
+  API_KEY:
+  PATHS:
+  DELETE_DELAY:
+  PROTOCOLS:
+lidarr:
+  URL: lidarr.mediafactory.svc.cluster.local:8686
+  API_KEY:
+  PATHS: /complete/music
+  DELETE_DELAY:
+  PROTOCOLS: torrent
+lidarr2:
+  URL:
+  API_KEY:
+  PATHS:
+  DELETE_DELAY:
+  PROTOCOLS:
+readarr:
+  URL: readarr.mediafactory.svc.cluster.local:8787
+  API_KEY:
+  PATHS: /complete/books
+  DELETE_DELAY:
+  PROTOCOLS: torrent
+readarr2:
+  URL:
+  API_KEY:
+  PATHS:
+  DELETE_DELAY:
+  PROTOCOLS:
+
+persistence:
+  movies:
+    hostPath: /mnt/nas/complete/movies
+    mountPath: /complete/movies
+  series:
+    hostPath: /mnt/nas/complete/series
+    mountPath: /complete/series
+  music:
+    hostPath: /mnt/nas/complete/music
+    mountPath: /complete/music
+  books:
+    hostPath: /mnt/nas/complete/books
+    mountPath: /complete/books
+  
+
+service:
+  port: 8989
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 50Mi
+  limits:
+    cpu: 6000m
+    memory: 2000Mi

@@ -67,6 +67,9 @@ readarr2:
   PROTOCOLS:
 
 persistence:
+  config:
+    hostPath: /home/apps/unpackerr
+    mountPath: /config
   movies:
     hostPath: /mnt/nas/complete/movies
     mountPath: /complete/movies

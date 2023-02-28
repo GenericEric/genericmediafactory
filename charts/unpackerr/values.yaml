@@ -10,48 +10,56 @@ env:
   TZ: America/Chicago
 
 radarr:
+  enabled: false
   URL: radarr.mediafactory.svc.cluster.local:7878
   API_KEY:
   PATHS: /complete/movies
   DELETE_DELAY:
   PROTOCOLS: torrent
 radarr2:
+  enabled: false
   URL:
   API_KEY:
   PATHS:
   DELETE_DELAY:
   PROTOCOLS:
 sonarr:
+  enabled: false
   URL: sonarr.mediafactory.svc.cluster.local:8989
   API_KEY:
   PATHS: /complete/series
   DELETE_DELAY:
   PROTOCOLS: torrent
 sonarr2:
+  enabled: false
   URL:
   API_KEY:
   PATHS:
   DELETE_DELAY:
   PROTOCOLS:
 lidarr:
+  enabled: false
   URL: lidarr.mediafactory.svc.cluster.local:8686
   API_KEY:
   PATHS: /complete/music
   DELETE_DELAY:
   PROTOCOLS: torrent
 lidarr2:
+  enabled: false
   URL:
   API_KEY:
   PATHS:
   DELETE_DELAY:
   PROTOCOLS:
 readarr:
+  enabled: false
   URL: readarr.mediafactory.svc.cluster.local:8787
   API_KEY:
   PATHS: /complete/books
   DELETE_DELAY:
   PROTOCOLS: torrent
 readarr2:
+  enabled: false
   URL:
   API_KEY:
   PATHS:

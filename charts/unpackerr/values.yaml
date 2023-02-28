@@ -2,8 +2,8 @@ appName: unpackerr
 namespace: mediafactory
 
 image:
-  repository: golift/unpackerr
-  tag: 0.11
+  repository: hotio/unpackerr
+  tag: latest
   imagePullPolicy: IfNotPresent
 
 env:

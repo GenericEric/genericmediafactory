@@ -11,6 +11,9 @@ env:
   PGID: 568
   PUID: 568
 
+ingress:
+  host: radarr.example.com
+
 service:
   port: 7878
 

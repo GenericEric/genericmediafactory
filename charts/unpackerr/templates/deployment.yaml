@@ -135,6 +135,8 @@ spec:
         - containerPort:  {{ .Values.service.port }}
           name:  {{ .Values.appName }}
         volumeMounts:
+        - name: config
+          mountPath: {{ .Values.persistence.config.mountPath }}
         - name: movies
           mountPath: {{ .Values.persistence.movies.mountPath }}
         - name: series
@@ -144,6 +146,9 @@ spec:
         - name: books
           mountPath: {{ .Values.persistence.books.mountPath }}
       volumes:
+        - name: config
+          hostPath:
+            path: {{ .Values.persistence.config.hostPath }}
         - name: movies
           hostPath:
             path: {{ .Values.persistence.movies.hostPath }}

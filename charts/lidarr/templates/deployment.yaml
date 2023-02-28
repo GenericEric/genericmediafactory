@@ -1,0 +1,68 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  {{ .Values.appName }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app:  {{ .Values.appName }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Values.appName }}
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app:  {{ .Values.appName }}
+    spec:
+      containers:
+      - name:  {{ .Values.appName }}
+        image:  "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        imagePullPolicy: {{ .Values.image.imagePullPolicy }}
+        resources:
+          requests:
+            cpu: {{ .Values.resources.requests.cpu }}
+            memory: {{ .Values.resources.requests.memory }}
+          limits:
+            cpu: {{ .Values.resources.limits.cpu }}
+            memory: {{ .Values.resources.limits.memory }}
+        env:
+        - name: TZ
+          value: "{{ .Values.env.TZ }}"
+        - name: PUID
+          value: "{{ .Values.env.PUID }}"
+        - name: PGID
+          value: "{{ .Values.env.PGID }}"
+        ports:
+        - containerPort:  {{ .Values.service.port }}
+          name:  {{ .Values.appName }}
+        volumeMounts:
+        - name: config
+          mountPath: {{ .Values.persistence.config.mountPath }}
+        - name: backups
+          mountPath: {{ .Values.persistence.backups.mountPath }}
+        - name: movies
+          mountPath: {{ .Values.persistence.music.mountPath }}
+        - name: downloads
+          mountPath: {{ .Values.persistence.downloads.mountPath }}
+        - name: complete
+          mountPath: {{ .Values.persistence.complete.mountPath }}
+      volumes:
+        - name: config
+          hostPath:
+            path: {{ .Values.persistence.config.hostPath }}
+        - name: backups
+          hostPath:
+            path: {{ .Values.persistence.backups.hostPath }}
+        - name: movies
+          hostPath:
+            path: {{ .Values.persistence.music.hostPath }}
+        - name: downloads
+          hostPath:
+            path: {{ .Values.persistence.downloads.hostPath }}
+        - name: complete
+          hostPath:
+            path: {{ .Values.persistence.complete.hostPath }}
+      restartPolicy: Always

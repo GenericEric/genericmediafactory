@@ -24,7 +24,7 @@ persistence:
   backups:
     hostPath: /mnt/nas/backups/sonarr
     mountPath: /backups
-  movies:
+  series:
     hostPath: /mnt/nas/series
     mountPath: /media/series
   downloads: 

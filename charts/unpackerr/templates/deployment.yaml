@@ -31,6 +31,10 @@ spec:
         env:
         - name: TZ
           value: "{{ .Values.env.TZ }}"
+        - name: PUID
+          value: "{{ .Values.env.PUID }}"
+        - name: PGID
+          value: "{{ .Values.env.PGID }}"
 {{ if .Values.radarr.enabled }}
         - name: UN_RADARR_0_URL
           value: "{{ .Values.radarr.URL }}"

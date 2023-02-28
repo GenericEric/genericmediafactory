@@ -19,10 +19,10 @@ service:
 
 persistence:
   config:
-    hostPath: /home/apps/radarr
+    hostPath: /home/apps/lidarr
     mountPath: /config
   backups:
-    hostPath: /mnt/nas/backups/radarr
+    hostPath: /mnt/nas/backups/lidarr
     mountPath: /backups
   music:
     hostPath: /mnt/nas/music

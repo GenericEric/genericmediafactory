@@ -12,9 +12,9 @@ env:
 radarr:
   enabled: false
   URL: radarr.mediafactory.svc.cluster.local:7878
-  API_KEY:
+  API_KEY: 
   PATHS: /complete/movies
-  DELETE_DELAY:
+  DELETE_DELAY: 60m
   PROTOCOLS: torrent
 radarr2:
   enabled: false

@@ -1,0 +1,34 @@
+appName: overseerr
+namespace: mediafactory
+
+image:
+  repository: linuxserver/overseerr
+  tag: version-v1.32.5
+  imagePullPolicy: IfNotPresent
+
+env:
+  TZ: America/Chicago
+  PGID: 568
+  PUID: 568
+
+ingress:
+  host: overseerr.example.com
+
+service:
+  port: 7878
+
+persistence:
+  config:
+    hostPath: /home/apps/overseerr
+    mountPath: /config
+  backups:
+    hostPath: /mnt/nas/backups/overseerr
+    mountPath: /backups
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 50Mi
+  limits:
+    cpu: 4000m
+    memory: 2000Mi

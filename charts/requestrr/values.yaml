@@ -22,7 +22,8 @@ persistence:
     hostPath: /home/apps/requestrr
     mountPath: /config
   backups:
-    hostPath: /mnt/nas/backups/requestrr
+    enabled: false
+    existingClaim: 
     mountPath: /backups
 
 resources:

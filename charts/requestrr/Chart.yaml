@@ -3,7 +3,7 @@ name: requestrr
 description: Requestrr is a chatbot used to simplify using services like Sonarr/Radarr/Ombi via the use of chat.
 appVersion: "2.1.2"
 type: application
-version: 0.1.0
+version: 0.2.0
 keywords:
   - requestrr
   - request

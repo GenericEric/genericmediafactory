@@ -41,13 +41,17 @@ spec:
         volumeMounts:
         - name: config
           mountPath: {{ .Values.persistence.config.mountPath }}
+{{ if .Values.persistence.backups.enabled }}
         - name: backups
           mountPath: {{ .Values.persistence.backups.mountPath }}
+{{ end }}
       volumes:
         - name: config
           hostPath:
             path: {{ .Values.persistence.config.hostPath }}
+{{ if .Values.persistence.backups.enabled }}
         - name: backups
-          hostPath:
-            path: {{ .Values.persistence.backups.hostPath }}
+          persistentVolumeClaim:
+            claimName: {{ .Values.persistence.backups.existingClaim }}
+{{ end }}
       restartPolicy: Always

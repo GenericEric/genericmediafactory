@@ -19,10 +19,11 @@ service:
 
 persistence:
   config:
-    hostPath: /home/apps/prowlarr
+    hostPath: 
     mountPath: /config
   backups:
-    hostPath: /mnt/nas/backups/prowlarr
+    enabled: false
+    existingClaim: 
     mountPath: /backups
 
 resources:

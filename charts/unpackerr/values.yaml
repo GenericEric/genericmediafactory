@@ -68,19 +68,19 @@ readarr2:
 
 persistence:
   config:
-    hostPath: /home/apps/unpackerr
+    hostPath: 
     mountPath: /config
   movies:
-    hostPath: /mnt/nas/complete/movies
+    existingClaim: 
     mountPath: /complete/movies
   series:
-    hostPath: /mnt/nas/complete/series
+    existingClaim: 
     mountPath: /complete/series
   music:
-    hostPath: /mnt/nas/complete/music
+    existingClaim: 
     mountPath: /complete/music
   books:
-    hostPath: /mnt/nas/complete/books
+    existingClaim: 
     mountPath: /complete/books
   
 

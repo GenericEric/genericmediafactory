@@ -19,10 +19,11 @@ service:
 
 persistence:
   config:
-    hostPath: /home/apps/overseerr
+    hostPath: 
     mountPath: /config
   backups:
-    hostPath: /mnt/nas/backups/overseerr
+    enabled: false
+    existingClaim: 
     mountPath: /backups
 
 resources:

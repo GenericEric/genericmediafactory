@@ -56,23 +56,31 @@ spec:
         volumeMounts:
         - name: config
           mountPath: {{ .Values.persistence.config.mountPath }}
+{{ if .Values.persistence.backups.enabled }}
         - name: backups
           mountPath: {{ .Values.persistence.backups.mountPath }}
+{{ end }}
         - name: downloads
           mountPath: {{ .Values.persistence.downloads.mountPath }}
+{{ if .Values.persistence.complete.enabled }}
         - name: complete
           mountPath: {{ .Values.persistence.complete.mountPath }}
+{{ end }}
       volumes:
         - name: config
           hostPath:
             path: {{ .Values.persistence.config.hostPath }}
+{{ if .Values.persistence.backups.enabled }}
         - name: backups
-          hostPath:
-            path: {{ .Values.persistence.backups.hostPath }}
+          persistentVolumeClaim:
+            claimName: {{ .Values.persistence.backups.existingClaim }}
+{{ end }}
         - name: downloads
           hostPath:
             path: {{ .Values.persistence.downloads.hostPath }}
+{{ if .Values.persistence.complete.enabled }}
         - name: complete
           hostPath:
             path: {{ .Values.persistence.complete.hostPath }}
+{{ end }}
       restartPolicy: Always

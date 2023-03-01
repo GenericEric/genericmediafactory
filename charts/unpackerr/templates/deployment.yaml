@@ -137,28 +137,44 @@ spec:
         volumeMounts:
         - name: config
           mountPath: {{ .Values.persistence.config.mountPath }}
+{{ if .Values.radarr.enabled }}
         - name: movies
           mountPath: {{ .Values.persistence.movies.mountPath }}
+{{ end }}
+{{ if .Values.sonarr.enabled }}
         - name: series
           mountPath: {{ .Values.persistence.series.mountPath }}
+{{ end }}
+{{ if .Values.lidarr.enabled }}
         - name: music
           mountPath: {{ .Values.persistence.music.mountPath }}
+{{ end }}
+{{ if .Values.readarr.enabled }}
         - name: books
           mountPath: {{ .Values.persistence.books.mountPath }}
+{{ end }}
       volumes:
         - name: config
           hostPath:
             path: {{ .Values.persistence.config.hostPath }}
+{{ if .Values.radarr.enabled }}
         - name: movies
-          hostPath:
-            path: {{ .Values.persistence.movies.hostPath }}
+          persistentVolumeClaim:
+            claimName: {{ .Values.persistence.movies.existingClaim }}
+{{ end }}
+{{ if .Values.sonarr.enabled }}
         - name: series
-          hostPath:
-            path: {{ .Values.persistence.series.hostPath }}
+          persistentVolumeClaim:
+            claimName: {{ .Values.persistence.series.existingClaim }}
+{{ end }}
+{{ if .Values.lidarr.enabled }}
         - name: music
-          hostPath:
-            path: {{ .Values.persistence.music.hostPath }}
+          persistentVolumeClaim:
+            claimName: {{ .Values.persistence.music.existingClaim }}
+{{ end }}
+{{ if .Values.readarr.enabled }}
         - name: books
-          hostPath:
-            path: {{ .Values.persistence.books.hostPath }}
+          persistentVolumeClaim:
+            claimName: {{ .Values.persistence.books.existingClaim }}
+{{ end }}
       restartPolicy: Always

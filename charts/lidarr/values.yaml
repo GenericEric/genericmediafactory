@@ -19,19 +19,22 @@ service:
 
 persistence:
   config:
-    hostPath: /home/apps/lidarr
+    hostPath: 
     mountPath: /config
   backups:
-    hostPath: /mnt/nas/backups/lidarr
+    enabled: false
+    existingClaim: 
     mountPath: /backups
   music:
-    hostPath: /mnt/nas/music
+    existingClaim: 
+    storageClass:
     mountPath: /media/music
   downloads: 
-    hostPath: /mnt/nas/downloads
+    hostPath: 
     mountPath: /downloads
   complete:
-    hostPath: /mnt/nas/complete
+    enabled: false
+    hostPath: 
     mountPath: /complete
 
 resources:

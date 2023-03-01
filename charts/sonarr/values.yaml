@@ -19,19 +19,21 @@ service:
 
 persistence:
   config:
-    hostPath: /home/apps/sonarr
+    hostPath: 
     mountPath: /config
   backups:
-    hostPath: /mnt/nas/backups/sonarr
+    enabled: false
+    existingClaim: 
     mountPath: /backups
   series:
-    hostPath: /mnt/nas/series
+    existingClaim: 
     mountPath: /media/series
   downloads: 
-    hostPath: /mnt/nas/downloads
+    hostPath: 
     mountPath: /downloads
   complete:
-    hostPath: /mnt/nas/complete
+    enabled: false
+    hostPath: 
     mountPath: /complete
 
 resources:

@@ -13,7 +13,7 @@ env:
 
 vpn:
   VPN_ENABLED: yes
-  LAN_NETWORK: 10.10.2.0/24,10.10.7.0/24
+  LAN_NETWORK: 10.10.10.0/24,192.168.0/24
   NAME_SERVERS: 1.1.1.1,1.0.0.1
   HEALTH_CHECK_HOST: one.one.one.one
   HEALTH_CHECK_INTERVAL: 300
@@ -29,12 +29,14 @@ persistence:
     hostPath: /home/apps/qbittorrent
     mountPath: /config
   backups:
-    hostPath: /mnt/nas/backups/qbittorrent
+    enabled: false
+    existingClaim: 
     mountPath: /backups
   downloads: 
     hostPath: /mnt/nas/downloads
     mountPath: /downloads
   complete:
+    enabled:
     hostPath: /mnt/nas/complete
     mountPath: /complete
 

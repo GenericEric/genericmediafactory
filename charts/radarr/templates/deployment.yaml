@@ -43,7 +43,7 @@ spec:
           mountPath: {{ .Values.persistence.config.mountPath }}
         - name: backups
           mountPath: {{ .Values.persistence.backups.mountPath }}
-        - name: movies
+        - name: {{ .Values.persistence.movies.existingClaim }}
           mountPath: {{ .Values.persistence.movies.mountPath }}
         - name: downloads
           mountPath: {{ .Values.persistence.downloads.mountPath }}
@@ -56,9 +56,9 @@ spec:
         - name: backups
           hostPath:
             path: {{ .Values.persistence.backups.hostPath }}
-        - name: movies
-          hostPath:
-            path: {{ .Values.persistence.movies.hostPath }}
+        - name: {{ .Values.persistence.movies.existingClaim }}
+          persistentVolumeClaim:
+            claimName: {{ .Values.persistence.movies.existingClaim }}
         - name: downloads
           hostPath:
             path: {{ .Values.persistence.downloads.hostPath }}

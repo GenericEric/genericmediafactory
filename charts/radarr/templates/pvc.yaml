@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ .Values.persistence.movies.existingClaim }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Values.appName }}
+spec:
+  storageClassName: {{ .Values.persistence.movies.storageClass }}
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Mi

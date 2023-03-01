@@ -19,20 +19,21 @@ service:
 
 persistence:
   config:
-    hostPath: /home/apps/radarr
+    hostPath: 
     mountPath: /config
   backups:
-    hostPath: /mnt/nas/backups/radarr
+    enabled: false
+    existingClaim: 
     mountPath: /backups
   movies:
-    existingClaim: nfs-media-movies
-    storageClass: media
+    existingClaim: 
     mountPath: /media/movies
   downloads: 
-    hostPath: /mnt/nas/downloads
+    hostPath: 
     mountPath: /downloads
   complete:
-    hostPath: /mnt/nas/complete
+    enabled: false
+    hostPath: 
     mountPath: /complete
 
 resources:

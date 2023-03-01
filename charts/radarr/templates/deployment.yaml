@@ -41,28 +41,36 @@ spec:
         volumeMounts:
         - name: config
           mountPath: {{ .Values.persistence.config.mountPath }}
+{{ if .Values.persistence.backups.enabled }}
         - name: backups
           mountPath: {{ .Values.persistence.backups.mountPath }}
-        - name: {{ .Values.persistence.movies.existingClaim }}
+{{ end }}
+        - name: movies
           mountPath: {{ .Values.persistence.movies.mountPath }}
         - name: downloads
           mountPath: {{ .Values.persistence.downloads.mountPath }}
+{{ if .Values.persistence.complete.enabled }}
         - name: complete
           mountPath: {{ .Values.persistence.complete.mountPath }}
+{{ end }}
       volumes:
         - name: config
           hostPath:
             path: {{ .Values.persistence.config.hostPath }}
+{{ if .Values.persistence.backups.enabled }}
         - name: backups
-          hostPath:
-            path: {{ .Values.persistence.backups.hostPath }}
-        - name: {{ .Values.persistence.movies.existingClaim }}
+          persistentVolumeClaim:
+            claimName: {{ .Values.persistence.backups.existingClaim }}
+{{ end }}
+        - name: movies
           persistentVolumeClaim:
             claimName: {{ .Values.persistence.movies.existingClaim }}
         - name: downloads
           hostPath:
             path: {{ .Values.persistence.downloads.hostPath }}
+{{ if .Values.persistence.complete.enabled }}
         - name: complete
           hostPath:
             path: {{ .Values.persistence.complete.hostPath }}
+{{ end }}
       restartPolicy: Always

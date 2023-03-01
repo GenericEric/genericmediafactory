@@ -1,0 +1,34 @@
+appName: requestrr
+namespace: mediafactory
+
+image:
+  repository: linuxserver/requestrr
+  tag: 2.1.2
+  imagePullPolicy: IfNotPresent
+
+env:
+  TZ: America/Chicago
+  PGID: 568
+  PUID: 568
+
+ingress:
+  host: requestrr.example.com
+
+service:
+  port: 4545
+
+persistence:
+  config:
+    hostPath: /home/apps/requestrr
+    mountPath: /config
+  backups:
+    hostPath: /mnt/nas/backups/requestrr
+    mountPath: /backups
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 50Mi
+  limits:
+    cpu: 4000m
+    memory: 2000Mi

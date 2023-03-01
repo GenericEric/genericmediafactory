@@ -15,7 +15,7 @@ ingress:
   host: overseerr.example.com
 
 service:
-  port: 7878
+  port: 5055
 
 persistence:
   config:

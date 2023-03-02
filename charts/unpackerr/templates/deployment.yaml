@@ -155,7 +155,7 @@ spec:
         - name: books
           mountPath: {{ .Values.persistence.books.mountPath }}
 {{ end }}
-{{ if .Values.persistence.enabled }}
+{{ if .Values.persistence.downloads.enabled }}
         - name: downloads
           mountPath: {{ .Values.persistence.downloads.mountPath }}
 {{ end }}
@@ -185,7 +185,7 @@ spec:
           hostPath:
             path: {{ .Values.persistence.books.hostPath }}
 {{ end }}
-{{ if .Values.persistence.enabled }}
+{{ if .Values.persistence.downloads.enabled }}
         - name: downloads
           hostPath:
             path: {{ .Values.persistence.downloads.hostPath }}

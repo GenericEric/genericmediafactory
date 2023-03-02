@@ -135,8 +135,10 @@ spec:
         - containerPort:  {{ .Values.service.port }}
           name:  {{ .Values.appName }}
         volumeMounts:
+{{ if .Values.persistence.enabled }}
         - name: config
           mountPath: {{ .Values.persistence.config.mountPath }}
+{{ end }}
 {{ if .Values.radarr.enabled }}
         - name: movies
           mountPath: {{ .Values.persistence.movies.mountPath }}
@@ -153,10 +155,16 @@ spec:
         - name: books
           mountPath: {{ .Values.persistence.books.mountPath }}
 {{ end }}
+{{ if .Values.persistence.enabled }}
+        - name: downloads
+          mountPath: {{ .Values.persistence.downloads.mountPath }}
+{{ end }}
       volumes:
+{{ if .Values.persistence.enabled }}
         - name: config
           hostPath:
             path: {{ .Values.persistence.config.hostPath }}
+{{ end }}
 {{ if .Values.radarr.enabled }}
         - name: movies
           hostPath:
@@ -176,5 +184,10 @@ spec:
         - name: books
           hostPath:
             path: {{ .Values.persistence.books.hostPath }}
+{{ end }}
+{{ if .Values.persistence.enabled }}
+        - name: downloads
+          hostPath:
+            path: {{ .Values.persistence.downloads.hostPath }}
 {{ end }}
       restartPolicy: Always

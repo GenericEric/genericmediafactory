@@ -68,6 +68,7 @@ readarr2:
 
 persistence:
   config:
+    enabled: false
     hostPath: 
     mountPath: /config
   movies:
@@ -82,6 +83,10 @@ persistence:
   books:
     hostPath: 
     mountPath: /complete/books
+  downloads:
+    enabled: false
+    hostPath:
+    mountPath:
   
 
 service:

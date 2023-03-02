@@ -19,7 +19,7 @@ These charts are meant to deploy a full-on factory to manage all aspects of your
 `helm repo update`
 
 # Assumptions
-* You have a Kubernetes cluster deployed (typically a single node k3s or k3d)
+* You have a Kubernetes cluster deployed (typically a single node [k3s](https://k3s.io/) or [k3d](https://k3d.io/))
 * You have Helm installed with access to said cluster
 * You have an existing PersistentVolumeClaim set up in the namespace you will deploy to that contains or links to your media library([NFS](https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner), etc)
 * You are okay with using hostPath for config directories and download directory (you can mount a network share to this hostPath and skip using the PersistentVolumeClaim for the media library)

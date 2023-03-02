@@ -16,7 +16,7 @@ These charts are meant to deploy a full-on factory to manage all aspects of your
 |Flaresolver | Solves CloudFlare protection for some indexers that need it |
 
 ~~~
-helm repo add mediafactory.charts.bgeneric.net
+helm repo add genericmediafactory https://mediafactory.charts.bgeneric.net
 helm repo update
 ~~~
 

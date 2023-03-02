@@ -4,7 +4,7 @@ These charts are meant to deploy a full-on factory to manage all aspects of your
 
 | App        | Description                                                                                            |
 |:-----------|:-------------------------------------------------------------------------------------------------------|
-|qBittorrent | Handles downloading your non copyrighted media from places like LegitTorrents or the Internet Archive. |
+|qBittorrent | Handles downloading your non copyrighted media from places like LegitTorrents or the Internet Archive. VPN enabled in case torrents are not allowed on your network. |
 |Radarr | Movie collection manager |
 |Sonarr | Series collection manager |
 |Lidarr | Music collection manager |

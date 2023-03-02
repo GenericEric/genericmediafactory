@@ -173,7 +173,7 @@ spec:
 {{ if .Values.sonarr.enabled }}
         - name: series
           hostPath:
-            path: {{ .Values.persistence.movies.hostPath }}
+            path: {{ .Values.persistence.series.hostPath }}
 {{ end }}
 {{ if .Values.lidarr.enabled }}
         - name: music

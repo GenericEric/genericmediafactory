@@ -1,7 +1,7 @@
 # Generic Media Factory
 **Spin up your own media factory in Kubernetes**
 
-These charts are meant to deploy a full-on factory to manage all aspects of your self-hosted media. They utilize the *arr suite of applications for which documentation can be found [here](https://wiki.servarr.com).
+These Helm charts are meant to deploy a full-on factory to manage all aspects of your self-hosted media. They utilize the *arr suite of applications for which documentation can be found [here](https://wiki.servarr.com).
 
 | App        | Description                                                                                            |
 |:-----------|:-------------------------------------------------------------------------------------------------------|

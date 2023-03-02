@@ -159,22 +159,22 @@ spec:
             path: {{ .Values.persistence.config.hostPath }}
 {{ if .Values.radarr.enabled }}
         - name: movies
-          persistentVolumeClaim:
-            claimName: {{ .Values.persistence.movies.existingClaim }}
+          hostPath:
+            path: {{ .Values.persistence.movies.hostPath }}
 {{ end }}
 {{ if .Values.sonarr.enabled }}
         - name: series
-          persistentVolumeClaim:
-            claimName: {{ .Values.persistence.series.existingClaim }}
+          hostPath:
+            path: {{ .Values.persistence.movies.hostPath }}
 {{ end }}
 {{ if .Values.lidarr.enabled }}
         - name: music
-          persistentVolumeClaim:
-            claimName: {{ .Values.persistence.music.existingClaim }}
+          hostPath:
+            path: {{ .Values.persistence.music.hostPath }}
 {{ end }}
 {{ if .Values.readarr.enabled }}
         - name: books
-          persistentVolumeClaim:
-            claimName: {{ .Values.persistence.books.existingClaim }}
+          hostPath:
+            path: {{ .Values.persistence.books.hostPath }}
 {{ end }}
       restartPolicy: Always

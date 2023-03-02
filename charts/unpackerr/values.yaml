@@ -71,16 +71,16 @@ persistence:
     hostPath: 
     mountPath: /config
   movies:
-    existingClaim: 
+    hostPath: 
     mountPath: /complete/movies
   series:
-    existingClaim: 
+    hostPath: 
     mountPath: /complete/series
   music:
-    existingClaim: 
+    hostPath: 
     mountPath: /complete/music
   books:
-    existingClaim: 
+    hostPath: 
     mountPath: /complete/books
   
 

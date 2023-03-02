@@ -15,6 +15,10 @@ These charts are meant to deploy a full-on factory to manage all aspects of your
 |Unpackerr | Monitors download directories and unzips any compressed media so the managers can import |
 |Flaresolver | Solves CloudFlare protection for some indexers that need it |
 
+~~~
+helm repo add mediafactory.charts.bgeneric.net
+helm repo update
+~~~
 
 # Assumptions
 * You have a Kubernetes cluster deployed (typically a single node [k3s](https://k3s.io/) or [k3d](https://k3d.io/))

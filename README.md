@@ -5,15 +5,15 @@ These Helm charts are meant to deploy a full-on factory to manage all aspects of
 
 | App        | Description                                                                                            |
 |:-----------|:-------------------------------------------------------------------------------------------------------|
-|qBittorrent | Handles downloading your non copyrighted media from places like LegitTorrents or the Internet Archive. VPN enabled in case torrents are not allowed on your network. |
-|Radarr | Movie collection manager |
-|Sonarr | Series collection manager |
-|Lidarr | Music collection manager |
-|Prowlarr | Provides indexing service to the other *arr applications |
-|Overseerr | Provides a web interface to request media |
-|Requestrr | Provides a Discord bot to request media within channels |
-|Unpackerr | Monitors download directories and unzips any compressed media so the managers can import |
-|Flaresolver | Solves CloudFlare protection for some indexers that need it |
+|[qBittorrent](https://github.com/DyonR/docker-qbittorrentvpn) | Handles downloading your non copyrighted media from places like LegitTorrents or the Internet Archive. VPN enabled in case torrents are not allowed on your network. |
+|[Radarr](https://github.com/linuxserver/docker-radarr) | Movie collection manager |
+|[Sonarr](https://github.com/linuxserver/docker-sonarr) | Series collection manager |
+|[Lidarr](https://github.com/linuxserver/docker-lidarr) | Music collection manager |
+|[Prowlarr](https://github.com/linuxserver/docker-prowlarr) | Provides indexing service to the other *arr applications |
+|[Overseerr](https://github.com/linuxserver/docker-overseerr) | Provides a web interface to request media |
+|[Requestrr](https://github.com/linuxserver/docker-requestrr) | Provides a Discord bot to request media within channels |
+|[Unpackerr](https://hotio.dev/containers/unpackerr) | Monitors download directories and unzips any compressed media so the managers can import |
+|[Flaresolverr](https://github.com/FlareSolverr/FlareSolverr) | Solves CloudFlare protection for some indexers that need it |
 
 ~~~
 helm repo add genericmediafactory https://mediafactory.charts.bgeneric.net

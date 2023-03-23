@@ -2,6 +2,27 @@ apiVersion: v1
 entries:
   flaresolverr:
   - apiVersion: v2
+    appVersion: 3.1.0
+    created: "2023-03-23T20:44:15.266383644Z"
+    description: FlareSolverr is a proxy server to bypass Cloudflare protection
+    digest: 24df6a21eab1b2e3ea6068259a994b8281d44266b93eec5de6449f5caed9850e
+    keywords:
+    - flaresolverr
+    - cloudflare
+    - proxy
+    - mediafactory
+    - torrent
+    - usenet
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: flaresolverr
+    type: application
+    urls:
+    - https://github.com/GenericEric/genericmediafactory/releases/download/flaresolverr-0.2.0/flaresolverr-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
     appVersion: 3.0.2
     created: "2023-03-02T08:52:38.272686636Z"
     description: FlareSolverr is a proxy server to bypass Cloudflare protection
@@ -266,4 +287,4 @@ entries:
     urls:
     - https://github.com/GenericEric/genericmediafactory/releases/download/unpackerr-0.2.0/unpackerr-0.2.0.tgz
     version: 0.2.0
-generated: "2023-03-23T20:38:38.595741502Z"
+generated: "2023-03-23T20:44:15.266398544Z"

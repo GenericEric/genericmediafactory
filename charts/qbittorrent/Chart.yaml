@@ -3,7 +3,7 @@ name: qbittorrent
 description: qBittorrent is a cross-platform free and open-source BitTorrent client
 appVersion: "4.5.1"
 type: application
-version: 0.2.0
+version: 0.3.0
 keywords:
   - qbittorrent
   - downloader

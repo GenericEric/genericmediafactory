@@ -22,6 +22,7 @@ helm search repo mediafactory
 ~~~
 
 # Assumptions
+* If you need https access, you have Traefik, Istio, or an external reverse proxy configured.
 * You have a Kubernetes cluster deployed (typically a single node [k3s](https://k3s.io/) or [k3d](https://k3d.io/))
 * You have Helm installed with access to said cluster
 * You have an existing PersistentVolumeClaim set up in the namespace you will deploy to that contains or links to your media library([NFS](https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner), etc)

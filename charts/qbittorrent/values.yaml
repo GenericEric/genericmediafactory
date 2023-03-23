@@ -36,7 +36,7 @@ persistence:
     hostPath: /mnt/nas/downloads
     mountPath: /downloads
   complete:
-    enabled:
+    enabled: false
     hostPath: /mnt/nas/complete
     mountPath: /complete
 

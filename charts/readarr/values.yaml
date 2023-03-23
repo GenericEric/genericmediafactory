@@ -1,0 +1,45 @@
+appName: readarr
+namespace: mediafactory
+
+image:
+  repository: linuxserver/readarr
+  tag: develop-version-0.1.4.1596
+  imagePullPolicy: IfNotPresent
+
+env:
+  TZ: America/Chicago
+  PGID: 568
+  PUID: 568
+
+ingress:
+  host: readarr.example.com
+
+service:
+  port: 8787
+
+persistence:
+  config:
+    hostPath: 
+    mountPath: /config
+  backups:
+    enabled: false
+    existingClaim: 
+    mountPath: /backups
+  books:
+    existingClaim: 
+    mountPath: /media/books
+  downloads: 
+    hostPath: 
+    mountPath: /downloads
+  complete:
+    enabled: false
+    hostPath: 
+    mountPath: /complete
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 50Mi
+  limits:
+    cpu: 4000m
+    memory: 2000Mi

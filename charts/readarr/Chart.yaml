@@ -1,0 +1,17 @@
+apiVersion: v2
+name: readarr
+description: Book Manager and Automation (Sonarr for Ebooks)
+appVersion: "0.1.4"
+type: application
+version: 0.1.0
+keywords:
+  - readarr
+  - books
+  - pvr
+  - mediafactory
+  - torrent
+  - usenet
+maintainers:
+  - name: GenericEric
+    email: eric@bgeneric.net
+    url: https://bgeneric.net

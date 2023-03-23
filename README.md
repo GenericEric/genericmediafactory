@@ -9,6 +9,7 @@ These Helm charts are meant to deploy a full-on factory to manage all aspects of
 |[Radarr](https://github.com/linuxserver/docker-radarr) | Movie collection manager |
 |[Sonarr](https://github.com/linuxserver/docker-sonarr) | Series collection manager |
 |[Lidarr](https://github.com/linuxserver/docker-lidarr) | Music collection manager |
+|[Readarr](https://github.com/linuxserver/docker-readarr) | Book collection manager |
 |[Prowlarr](https://github.com/linuxserver/docker-prowlarr) | Provides indexing service to the other *arr applications |
 |[Overseerr](https://github.com/linuxserver/docker-overseerr) | Provides a web interface to request media |
 |[Requestrr](https://github.com/linuxserver/docker-requestrr) | Provides a Discord bot to request media within channels (This project is no longer supported so use at your own risk) |

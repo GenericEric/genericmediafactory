@@ -5,7 +5,16 @@ on:
     branches:
       - main
     paths:
-      - 'charts/**'
+      - 'charts/prowlarr/**'
+      - 'charts/flaresolverr/**'
+      - 'charts/lidarr/**'
+      - 'charts/overseerr/**'
+      - 'charts/qbittorrent/**'
+      - 'charts/radarr/**'
+      - 'charts/readarr/**'
+      - 'charts/requestrr/**'
+      - 'charts/sonarr/**'
+      - 'charts/unpackerr/**'
 
 jobs:
   release:

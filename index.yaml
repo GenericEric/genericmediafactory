@@ -415,6 +415,27 @@ entries:
   requestrr:
   - apiVersion: v2
     appVersion: 2.1.2
+    created: "2023-04-01T15:50:21.673465761Z"
+    description: Requestrr is a chatbot used to simplify using services like Sonarr/Radarr/Ombi
+      via the use of chat.
+    digest: 9b1c4ae9e5172f6fa455157c416850d77ee6248a31b9ac80f68a4e50faebed33
+    keywords:
+    - requestrr
+    - request
+    - mediafactory
+    - torrent
+    - usenet
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: requestrr
+    type: application
+    urls:
+    - https://github.com/GenericEric/genericmediafactory/releases/download/requestrr-0.3.0/requestrr-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
+    appVersion: 2.1.2
     created: "2023-03-02T08:52:38.949875749Z"
     description: Requestrr is a chatbot used to simplify using services like Sonarr/Radarr/Ombi
       via the use of chat.
@@ -550,4 +571,4 @@ entries:
     urls:
     - https://github.com/GenericEric/genericmediafactory/releases/download/unpackerr-0.2.0/unpackerr-0.2.0.tgz
     version: 0.2.0
-generated: "2023-04-01T15:49:06.814416395Z"
+generated: "2023-04-01T15:50:21.673829464Z"

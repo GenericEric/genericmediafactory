@@ -3,7 +3,7 @@ namespace: mediafactory
 
 image:
   repository: linuxserver/requestrr
-  tag: 2.1.2
+  tag: V2.1.2-ls44
   imagePullPolicy: IfNotPresent
 
 env:

@@ -67,8 +67,6 @@ spec:
         - name: backups
           mountPath: {{ .Values.persistence.backups.mountPath }}
 {{ end }}
-        - name: music
-          mountPath: {{ .Values.persistence.music.mountPath }}
         - name: downloads
           mountPath: {{ .Values.persistence.downloads.mountPath }}
 {{ if .Values.persistence.complete.enabled }}
@@ -84,9 +82,6 @@ spec:
           persistentVolumeClaim:
             claimName: {{ .Values.persistence.backups.existingClaim }}
 {{ end }}
-        - name: music
-          persistentVolumeClaim:
-            claimName: {{ .Values.persistence.music.existingClaim }}
         - name: downloads
           hostPath:
             path: {{ .Values.persistence.downloads.hostPath }}

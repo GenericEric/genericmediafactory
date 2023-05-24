@@ -15,6 +15,7 @@ on:
       - 'charts/requestrr/**'
       - 'charts/sonarr/**'
       - 'charts/unpackerr/**'
+      - 'charts/sabnzbdvpn/**'
 
 jobs:
   release:

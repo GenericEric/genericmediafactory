@@ -1,0 +1,18 @@
+apiVersion: v2
+name: sabnzbdvpn
+description: SABnzbd is an Open Source Binary Newsreader written in Python.
+appVersion: "4.0.1"
+type: application
+version: 0.1.0
+keywords:
+  - sabnzbd
+  - vpn
+  - music
+  - pvr
+  - mediafactory
+  - torrent
+  - usenet
+maintainers:
+  - name: GenericEric
+    email: eric@bgeneric.net
+    url: https://bgeneric.net

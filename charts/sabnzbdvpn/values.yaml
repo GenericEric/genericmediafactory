@@ -13,6 +13,7 @@ env:
 
 vpn:
   VPN_ENABLED: yes
+  ENABLE_PRIVOXY: yes
   VPN_PROV: custom
   VPN_CLIENT: wireguard
   STRICT_PORT_FORWARD: yes

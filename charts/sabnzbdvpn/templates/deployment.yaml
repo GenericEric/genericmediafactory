@@ -45,6 +45,8 @@ spec:
           value: "{{ .Values.env.PGID }}"
         - name: VPN_ENABLED
           value: "{{ .Values.vpn.VPN_ENABLED }}"
+        - name: ENABLE_PRIVOXY
+          value: "{{ .Values.vpn.ENABLE_PRIVOXY }}"
         - name: VPN_CLIENT
           value: "{{ .Values.vpn.VPN_CLIENT }}"
         - name: VPN_PROV

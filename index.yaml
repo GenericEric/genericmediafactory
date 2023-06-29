@@ -2,6 +2,27 @@ apiVersion: v1
 entries:
   flaresolverr:
   - apiVersion: v2
+    appVersion: 3.2.1
+    created: "2023-06-29T03:09:03.199981614Z"
+    description: FlareSolverr is a proxy server to bypass Cloudflare protection
+    digest: 1e8796136a8bf0f7f87dfd22f439ce977de98d2b7edc90b95582af5f86086b7f
+    keywords:
+    - flaresolverr
+    - cloudflare
+    - proxy
+    - mediafactory
+    - torrent
+    - usenet
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: flaresolverr
+    type: application
+    urls:
+    - https://github.com/GenericEric/genericmediafactory/releases/download/flaresolverr-0.4.0/flaresolverr-0.4.0.tgz
+    version: 0.4.0
+  - apiVersion: v2
     appVersion: 3.1.2
     created: "2023-05-09T00:17:36.436638546Z"
     description: FlareSolverr is a proxy server to bypass Cloudflare protection
@@ -109,6 +130,29 @@ entries:
   lidarr:
   - apiVersion: v2
     appVersion: 1.1.4
+    created: "2023-06-29T03:09:03.289898584Z"
+    description: Lidarr is a music collection manager for Usenet and BitTorrent users.
+      It can monitor multiple RSS feeds for new tracks from your favorite artists
+      and will grab, sort and rename them.
+    digest: c1db96ad157976d0bd1f324dd1254eb63f1a42deb78c5963050f3c742af5478f
+    keywords:
+    - lidarr
+    - music
+    - pvr
+    - mediafactory
+    - torrent
+    - usenet
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: lidarr
+    type: application
+    urls:
+    - https://github.com/GenericEric/genericmediafactory/releases/download/lidarr-0.4.0/lidarr-0.4.0.tgz
+    version: 0.4.0
+  - apiVersion: v2
+    appVersion: 1.1.4
     created: "2023-05-09T00:17:36.521261012Z"
     description: Lidarr is a music collection manager for Usenet and BitTorrent users.
       It can monitor multiple RSS feeds for new tracks from your favorite artists
@@ -201,6 +245,29 @@ entries:
     version: 0.2.0
   overseerr:
   - apiVersion: v2
+    appVersion: 1.33.0
+    created: "2023-06-29T03:09:03.385616354Z"
+    description: Overseerr is a free and open source software application for managing
+      requests for your media library. It integrates with your existing services,
+      such as Sonarr, Radarr, and Plex!
+    digest: 4c19a46d00fac51eeb808b0c2ebcb4d88dbed460f0aedce13bd5cb339cf33367
+    keywords:
+    - overseerr
+    - movies
+    - request
+    - mediafactory
+    - torrent
+    - usenet
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: overseerr
+    type: application
+    urls:
+    - https://github.com/GenericEric/genericmediafactory/releases/download/overseerr-0.4.0/overseerr-0.4.0.tgz
+    version: 0.4.0
+  - apiVersion: v2
     appVersion: 1.32.5
     created: "2023-05-09T00:17:36.602025748Z"
     description: Overseerr is a free and open source software application for managing
@@ -270,6 +337,27 @@ entries:
     - https://github.com/GenericEric/genericmediafactory/releases/download/overseerr-0.2.0/overseerr-0.2.0.tgz
     version: 0.2.0
   prowlarr:
+  - apiVersion: v2
+    appVersion: 1.6.3
+    created: "2023-06-29T03:09:03.491820808Z"
+    description: Prowlarr is a indexer manager/proxy built on the popular arr .net/reactjs
+      base stack to integrate with your various PVR apps.
+    digest: fc10719a9feefcefd5449fc884a22cf06d80b981207a4f9368cf6d8d5882304a
+    keywords:
+    - prowlarr
+    - indexer
+    - mediafactory
+    - torrent
+    - usenet
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: prowlarr
+    type: application
+    urls:
+    - https://github.com/GenericEric/genericmediafactory/releases/download/prowlarr-0.4.5/prowlarr-0.4.5.tgz
+    version: 0.4.5
   - apiVersion: v2
     appVersion: 1.4.1
     created: "2023-05-09T00:17:36.686407312Z"
@@ -460,6 +548,27 @@ entries:
     version: 0.2.0
   radarr:
   - apiVersion: v2
+    appVersion: 4.5.2
+    created: "2023-06-29T03:09:03.577850909Z"
+    description: A fork of Sonarr to work with movies à la Couchpotato.
+    digest: 2961b08ec8bdf3d16e813c6e60dfd45c840e2fcd11d3c4e2a5c4c38923952d7f
+    keywords:
+    - radarr
+    - movies
+    - pvr
+    - mediafactory
+    - torrent
+    - usenet
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: radarr
+    type: application
+    urls:
+    - https://github.com/GenericEric/genericmediafactory/releases/download/radarr-0.4.0/radarr-0.4.0.tgz
+    version: 0.4.0
+  - apiVersion: v2
     appVersion: 4.4.4
     created: "2023-05-09T00:17:36.769039362Z"
     description: A fork of Sonarr to work with movies à la Couchpotato.
@@ -523,6 +632,27 @@ entries:
     - https://github.com/GenericEric/genericmediafactory/releases/download/radarr-0.2.0/radarr-0.2.0.tgz
     version: 0.2.0
   readarr:
+  - apiVersion: v2
+    appVersion: 0.1.9
+    created: "2023-06-29T03:09:03.6747501Z"
+    description: Book Manager and Automation (Sonarr for Ebooks)
+    digest: d31dd89efc8d24eed774ec8d6bd31bf99ee60ba4f20b856e5e0b2172edfe6a6d
+    keywords:
+    - readarr
+    - books
+    - pvr
+    - mediafactory
+    - torrent
+    - usenet
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: readarr
+    type: application
+    urls:
+    - https://github.com/GenericEric/genericmediafactory/releases/download/readarr-0.4.0/readarr-0.4.0.tgz
+    version: 0.4.0
   - apiVersion: v2
     appVersion: 0.1.4
     created: "2023-03-23T22:05:27.044280301Z"
@@ -588,6 +718,28 @@ entries:
     - https://github.com/GenericEric/genericmediafactory/releases/download/requestrr-0.2.0/requestrr-0.2.0.tgz
     version: 0.2.0
   sabnzbdvpn:
+  - apiVersion: v2
+    appVersion: 4.0.2
+    created: "2023-06-29T03:09:03.769796159Z"
+    description: SABnzbd is an Open Source Binary Newsreader written in Python.
+    digest: a70c2c8ab8e3008b08e670ec7370625b976555a360d5ecc554c31db50870f597
+    keywords:
+    - sabnzbd
+    - vpn
+    - music
+    - pvr
+    - mediafactory
+    - torrent
+    - usenet
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: sabnzbdvpn
+    type: application
+    urls:
+    - https://github.com/GenericEric/genericmediafactory/releases/download/sabnzbdvpn-0.4.0/sabnzbdvpn-0.4.0.tgz
+    version: 0.4.0
   - apiVersion: v2
     appVersion: 4.0.1
     created: "2023-05-25T15:52:27.495801198Z"
@@ -655,6 +807,30 @@ entries:
     - https://github.com/GenericEric/genericmediafactory/releases/download/sabnzbdvpn-0.1.2/sabnzbdvpn-0.1.2.tgz
     version: 0.1.2
   sonarr:
+  - apiVersion: v2
+    appVersion: 3.0.10
+    created: "2023-06-29T03:09:03.868902889Z"
+    description: Sonarr is a PVR for Usenet and BitTorrent users. It can monitor multiple
+      RSS feeds for new episodes of your favorite shows and will grab, sort and rename
+      them.
+    digest: 4d5f7be4059c6ddcd3a09dd301b8cafdc3b1b12f435a67266c2260d3f9527ed5
+    keywords:
+    - sonarr
+    - series
+    - shows
+    - pvr
+    - mediafactory
+    - torrent
+    - usenet
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: sonarr
+    type: application
+    urls:
+    - https://github.com/GenericEric/genericmediafactory/releases/download/sonarr-0.4.5/sonarr-0.4.5.tgz
+    version: 0.4.5
   - apiVersion: v2
     appVersion: 3.0.10
     created: "2023-05-09T00:17:36.845707765Z"
@@ -754,6 +930,27 @@ entries:
   unpackerr:
   - apiVersion: v2
     appVersion: 0.11.2
+    created: "2023-06-29T03:09:03.965050667Z"
+    description: This application runs as a daemon on your download host. It checks
+      for completed downloads and extracts them so Lidarr, Radarr, Readarr, and Sonarr
+      may import them.
+    digest: a52430df356a4874d9129a3648a78f525377cfcf3bb8a8d8a3fa837cba995200
+    keywords:
+    - unpackerr
+    - mediafactory
+    - torrent
+    - usenet
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: unpackerr
+    type: application
+    urls:
+    - https://github.com/GenericEric/genericmediafactory/releases/download/unpackerr-0.4.0/unpackerr-0.4.0.tgz
+    version: 0.4.0
+  - apiVersion: v2
+    appVersion: 0.11.2
     created: "2023-05-09T00:17:36.931332139Z"
     description: This application runs as a daemon on your download host. It checks
       for completed downloads and extracts them so Lidarr, Radarr, Readarr, and Sonarr
@@ -836,4 +1033,4 @@ entries:
     urls:
     - https://github.com/GenericEric/genericmediafactory/releases/download/unpackerr-0.2.0/unpackerr-0.2.0.tgz
     version: 0.2.0
-generated: "2023-05-25T15:52:27.496231805Z"
+generated: "2023-06-29T03:09:03.965336472Z"

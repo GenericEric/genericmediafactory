@@ -3,7 +3,7 @@ namespace: mediafactory
 
 image:
   repository: linuxserver/overseerr
-  tag: v1.32.5-ls63
+  tag: v1.33.0-ls69
   imagePullPolicy: IfNotPresent
 
 env:

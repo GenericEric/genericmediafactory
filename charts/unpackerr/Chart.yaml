@@ -3,7 +3,7 @@ name: unpackerr
 description: This application runs as a daemon on your download host. It checks for completed downloads and extracts them so Lidarr, Radarr, Readarr, and Sonarr may import them.
 appVersion: "0.11.2"
 type: application
-version: 0.2.3
+version: 0.4.0
 keywords:
   - unpackerr
   - mediafactory

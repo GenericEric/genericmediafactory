@@ -3,7 +3,7 @@ namespace: mediafactory
 
 image:
   repository: linuxserver/readarr
-  tag: develop-version-0.1.4.1596
+  tag: develop-0.1.9.1905-ls49
   imagePullPolicy: IfNotPresent
 
 env:

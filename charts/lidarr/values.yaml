@@ -3,7 +3,7 @@ namespace: mediafactory
 
 image:
   repository: linuxserver/lidarr
-  tag: 1.1.4.3027-ls119
+  tag: 1.1.4.3027-ls126
   imagePullPolicy: IfNotPresent
 
 env:

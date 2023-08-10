@@ -1,0 +1,35 @@
+appName: organizr
+namespace: mediafactory
+
+image:
+  repository: organizr/organizr
+  tag: latest
+  imagePullPolicy: IfNotPresent
+
+env:
+  TZ: America/Chicago
+  PGID: 568
+  PUID: 568
+
+ingress:
+  host: organizr.example.com
+
+service:
+  port: 80
+
+persistence:
+  config:
+    hostPath: 
+    mountPath: /config
+  backups:
+    enabled: false
+    existingClaim: 
+    mountPath: /backups
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 60Mi
+  limits:
+    cpu: 4000m
+    memory: 2000Mi

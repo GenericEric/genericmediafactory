@@ -150,6 +150,29 @@ entries:
     version: 0.1.0
   lidarr:
   - apiVersion: v2
+    appVersion: 1.2.6
+    created: "2023-08-10T17:15:34.316506298Z"
+    description: Lidarr is a music collection manager for Usenet and BitTorrent users.
+      It can monitor multiple RSS feeds for new tracks from your favorite artists
+      and will grab, sort and rename them.
+    digest: 1847f5f677d406c6fa05245172c90fd68f28d8519873763b5b93bc49fe0fd5cf
+    keywords:
+    - lidarr
+    - music
+    - pvr
+    - mediafactory
+    - torrent
+    - usenet
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: lidarr
+    type: application
+    urls:
+    - https://github.com/GenericEric/genericmediafactory/releases/download/lidarr-0.5.0/lidarr-0.5.0.tgz
+    version: 0.5.0
+  - apiVersion: v2
     appVersion: 1.1.4
     created: "2023-06-29T03:09:03.289898584Z"
     description: Lidarr is a music collection manager for Usenet and BitTorrent users.
@@ -1054,4 +1077,4 @@ entries:
     urls:
     - https://github.com/GenericEric/genericmediafactory/releases/download/unpackerr-0.2.0/unpackerr-0.2.0.tgz
     version: 0.2.0
-generated: "2023-08-10T17:13:09.818842845Z"
+generated: "2023-08-10T17:15:34.3167006Z"

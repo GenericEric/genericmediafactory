@@ -1,5 +1,27 @@
 apiVersion: v1
 entries:
+  Organizr:
+  - apiVersion: v2
+    appVersion: "2.0"
+    created: "2023-08-10T18:47:47.467173465Z"
+    description: An HTPC/Homelab services organizer that is written in PHP.
+    digest: dd04f25e6da5546cbae4045c7b6ead10c6502b517aeff4750c7e9d53382ac967
+    keywords:
+    - organizr
+    - homelab
+    - pvr
+    - mediafactory
+    - torrent
+    - usenet
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: Organizr
+    type: application
+    urls:
+    - https://github.com/GenericEric/genericmediafactory/releases/download/Organizr-0.5.0/Organizr-0.5.0.tgz
+    version: 0.5.0
   flaresolverr:
   - apiVersion: v2
     appVersion: 3.3.2
@@ -1230,4 +1252,4 @@ entries:
     urls:
     - https://github.com/GenericEric/genericmediafactory/releases/download/unpackerr-0.2.0/unpackerr-0.2.0.tgz
     version: 0.2.0
-generated: "2023-08-10T17:23:33.733518766Z"
+generated: "2023-08-10T18:47:47.467375968Z"

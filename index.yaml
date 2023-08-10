@@ -405,6 +405,27 @@ entries:
     version: 0.2.0
   prowlarr:
   - apiVersion: v2
+    appVersion: 1.7.4
+    created: "2023-08-10T17:16:51.340993664Z"
+    description: Prowlarr is a indexer manager/proxy built on the popular arr .net/reactjs
+      base stack to integrate with your various PVR apps.
+    digest: 776ae0a612e1e42efbad6bc64b73b69f9bec6a237deab816bdf4ddd85425e50b
+    keywords:
+    - prowlarr
+    - indexer
+    - mediafactory
+    - torrent
+    - usenet
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: prowlarr
+    type: application
+    urls:
+    - https://github.com/GenericEric/genericmediafactory/releases/download/prowlarr-0.5.0/prowlarr-0.5.0.tgz
+    version: 0.5.0
+  - apiVersion: v2
     appVersion: 1.6.3
     created: "2023-06-29T03:09:03.491820808Z"
     description: Prowlarr is a indexer manager/proxy built on the popular arr .net/reactjs
@@ -1100,4 +1121,4 @@ entries:
     urls:
     - https://github.com/GenericEric/genericmediafactory/releases/download/unpackerr-0.2.0/unpackerr-0.2.0.tgz
     version: 0.2.0
-generated: "2023-08-10T17:16:00.073163964Z"
+generated: "2023-08-10T17:16:51.341339563Z"

@@ -742,6 +742,27 @@ entries:
     version: 0.2.0
   readarr:
   - apiVersion: v2
+    appVersion: 0.3.1
+    created: "2023-08-10T17:20:25.319642974Z"
+    description: Book Manager and Automation (Sonarr for Ebooks)
+    digest: 67e70351a76ab681e09e8571b819db60c96a85ebf42dd05a5494a58386414f28
+    keywords:
+    - readarr
+    - books
+    - pvr
+    - mediafactory
+    - torrent
+    - usenet
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: readarr
+    type: application
+    urls:
+    - https://github.com/GenericEric/genericmediafactory/releases/download/readarr-0.5.0/readarr-0.5.0.tgz
+    version: 0.5.0
+  - apiVersion: v2
     appVersion: 0.1.9
     created: "2023-06-29T03:09:03.6747501Z"
     description: Book Manager and Automation (Sonarr for Ebooks)
@@ -1142,4 +1163,4 @@ entries:
     urls:
     - https://github.com/GenericEric/genericmediafactory/releases/download/unpackerr-0.2.0/unpackerr-0.2.0.tgz
     version: 0.2.0
-generated: "2023-08-10T17:19:16.03719861Z"
+generated: "2023-08-10T17:20:25.319900477Z"

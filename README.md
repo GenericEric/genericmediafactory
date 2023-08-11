@@ -13,6 +13,7 @@ These Helm charts are meant to deploy a full-on factory to manage all aspects of
 |[Readarr](https://github.com/linuxserver/docker-readarr) | Book collection manager |
 |[Prowlarr](https://github.com/linuxserver/docker-prowlarr) | Provides indexing service to the other *arr applications |
 |[Overseerr](https://github.com/linuxserver/docker-overseerr) | Provides a web interface to request media |
+|[Jellyseerr](https://github.com/Fallenbagel/jellyseerr) | Provides a web interface to request media. Integrates with Jellyfin |
 |[Requestrr](https://github.com/linuxserver/docker-requestrr) | Provides a Discord bot to request media within channels (This project is no longer supported so use at your own risk) |
 |[Unpackerr](https://hotio.dev/containers/unpackerr) | Monitors download directories and unzips any compressed media so the managers can import |
 |[Flaresolverr](https://github.com/FlareSolverr/FlareSolverr) | Solves CloudFlare protection for some indexers that need it |

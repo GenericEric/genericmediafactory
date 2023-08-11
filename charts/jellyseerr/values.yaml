@@ -1,0 +1,35 @@
+appName: jellyseerr
+namespace: mediafactory
+
+image:
+  repository: fallenbagel/jellyseerr
+  tag: 1.6.0
+  imagePullPolicy: IfNotPresent
+
+env:
+  TZ: America/Chicago
+  PGID: 568
+  PUID: 568
+
+ingress:
+  host: jellyseerr.example.com
+
+service:
+  port: 5055
+
+persistence:
+  config:
+    hostPath: 
+    mountPath: /config
+  backups:
+    enabled: false
+    existingClaim: 
+    mountPath: /backups
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 50Mi
+  limits:
+    cpu: 4000m
+    memory: 2000Mi

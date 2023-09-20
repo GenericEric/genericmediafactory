@@ -3,7 +3,7 @@ namespace: mediafactory
 
 image:
   repository: flaresolverr/flaresolverr
-  tag: v3.3.2
+  tag: v3.3.6
   imagePullPolicy: IfNotPresent
 
 env:

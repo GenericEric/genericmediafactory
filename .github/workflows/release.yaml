@@ -12,11 +12,9 @@ on:
       - 'charts/qbittorrent/**'
       - 'charts/radarr/**'
       - 'charts/readarr/**'
-      - 'charts/requestrr/**'
       - 'charts/sonarr/**'
       - 'charts/unpackerr/**'
       - 'charts/sabnzbdvpn/**'
-      - 'charts/organizr/**'
       - 'charts/jellyseerr/**'
 
 jobs:

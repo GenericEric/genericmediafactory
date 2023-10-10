@@ -20,7 +20,7 @@ service:
 persistence:
   config:
     hostPath: 
-    mountPath: /data
+    mountPath: /data/database
   backups:
     enabled: false
     existingClaim: 

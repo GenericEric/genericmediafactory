@@ -3,7 +3,7 @@ namespace: mediafactory
 
 image:
   repository: linuxserver/radarr
-  tag: 4.7.5.7809-ls187
+  tag: 5.0.3.8127-ls190
   imagePullPolicy: IfNotPresent
 
 env:
@@ -35,6 +35,14 @@ persistence:
     enabled: false
     hostPath: 
     mountPath: /complete
+  custom-services:
+    enabled: false
+    hostPath:
+    mountPath: /custom-services.d
+  custom-cont-init:
+    enabled: false
+    hostPath:
+    mountPath: /custom-cont-init.d
 
 resources:
   requests:

@@ -53,6 +53,14 @@ spec:
         - name: complete
           mountPath: {{ .Values.persistence.complete.mountPath }}
 {{ end }}
+{{ if .Values.persistence.custom-services.enabled }}
+        - name: custom-services
+          mountPath: {{ .Values.persistence.custom-services.mountPath }}
+{{ end }}
+{{ if .Values.persistence.custom-cont-init.enabled }}
+        - name: custom-services
+          mountPath: {{ .Values.persistence.custom-cont-init.mountPath }}
+{{ end }}
       volumes:
         - name: config
           hostPath:
@@ -72,5 +80,15 @@ spec:
         - name: complete
           hostPath:
             path: {{ .Values.persistence.complete.hostPath }}
+{{ end }}
+{{ if .Values.persistence.custom-services.enabled }}
+        - name: custom-services
+          hostPath:
+            path: {{ .Values.persistence.custom-services.hostPath }}
+{{ end }}
+{{ if .Values.persistence.custom-cont-init.enabled }}
+        - name: custom-cont-init
+          hostPath:
+            path: {{ .Values.persistence.custom-cont-init.hostPath }}
 {{ end }}
       restartPolicy: Always

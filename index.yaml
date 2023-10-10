@@ -1521,6 +1521,28 @@ entries:
   wizarr:
   - apiVersion: v2
     appVersion: 3.4.1
+    created: "2023-10-10T13:48:53.545059742Z"
+    description: Wizarr is an advanced user invitation and management system for Jellyfin,
+      Plex, Emby etc.
+    digest: 9b83b4c1bbfaea9f5f40f90773216de295c56889d3f6674a97090476dd227288
+    keywords:
+    - wizarr
+    - invitation
+    - pvr
+    - mediafactory
+    - torrent
+    - usenet
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: wizarr
+    type: application
+    urls:
+    - wizarr-0.6.0.tgz
+    version: 0.6.0
+  - apiVersion: v2
+    appVersion: 3.4.1
     created: "2023-10-10T12:59:18.049143778Z"
     description: Wizarr is an advanced user invitation and management system for Jellyfin,
       Plex, Emby etc.
@@ -1541,4 +1563,4 @@ entries:
     urls:
     - wizarr-0.5.0.tgz
     version: 0.5.0
-generated: "2023-10-10T12:59:18.049227078Z"
+generated: "2023-10-10T13:48:53.545262544Z"

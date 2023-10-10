@@ -16,6 +16,7 @@ on:
       - 'charts/unpackerr/**'
       - 'charts/sabnzbdvpn/**'
       - 'charts/jellyseerr/**'
+      - 'charts/wizarr/**'
 
 jobs:
   release:

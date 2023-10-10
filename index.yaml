@@ -1518,4 +1518,27 @@ entries:
     urls:
     - https://github.com/GenericEric/genericmediafactory/releases/download/unpackerr-0.2.0/unpackerr-0.2.0.tgz
     version: 0.2.0
-generated: "2023-09-20T21:28:10.608529175Z"
+  wizarr:
+  - apiVersion: v2
+    appVersion: 3.4.1
+    created: "2023-10-10T12:59:18.049143778Z"
+    description: Wizarr is an advanced user invitation and management system for Jellyfin,
+      Plex, Emby etc.
+    digest: 6541f3b445c3454af88d626def0f15c43d8151ae3fada4ca90782d43256b87f2
+    keywords:
+    - wizarr
+    - invitation
+    - pvr
+    - mediafactory
+    - torrent
+    - usenet
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: wizarr
+    type: application
+    urls:
+    - wizarr-0.5.0.tgz
+    version: 0.5.0
+generated: "2023-10-10T12:59:18.049227078Z"

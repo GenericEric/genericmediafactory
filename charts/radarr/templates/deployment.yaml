@@ -58,7 +58,7 @@ spec:
           mountPath: {{ .Values.persistence.customServices.mountPath }}
 {{ end }}
 {{ if .Values.persistence.customContInit.enabled }}
-        - name: custom-services
+        - name: custom-cont-init
           mountPath: {{ .Values.persistence.customContInit.mountPath }}
 {{ end }}
       volumes:

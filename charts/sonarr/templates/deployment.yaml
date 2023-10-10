@@ -35,6 +35,8 @@ spec:
           value: "{{ .Values.env.PUID }}"
         - name: PGID
           value: "{{ .Values.env.PGID }}"
+        - name: DOCKER_MODS
+          value: linuxserver/mods:radarr-striptracks
         ports:
         - containerPort:  {{ .Values.service.port }}
           name:  {{ .Values.appName }}
@@ -52,6 +54,14 @@ spec:
 {{ if .Values.persistence.complete.enabled }}
         - name: complete
           mountPath: {{ .Values.persistence.complete.mountPath }}
+{{ end }}
+{{ if .Values.persistence.customServices.enabled }}
+        - name: custom-services
+          mountPath: {{ .Values.persistence.customServices.mountPath }}
+{{ end }}
+{{ if .Values.persistence.customContInit.enabled }}
+        - name: custom-cont-init
+          mountPath: {{ .Values.persistence.customContInit.mountPath }}
 {{ end }}
       volumes:
         - name: config
@@ -72,5 +82,15 @@ spec:
         - name: complete
           hostPath:
             path: {{ .Values.persistence.complete.hostPath }}
+{{ end }}
+{{ if .Values.persistence.customServices.enabled }}
+        - name: custom-services
+          hostPath:
+            path: {{ .Values.persistence.customServices.hostPath }}
+{{ end }}
+{{ if .Values.persistence.customContInit.enabled }}
+        - name: custom-cont-init
+          hostPath:
+            path: {{ .Values.persistence.customContInit.hostPath }}
 {{ end }}
       restartPolicy: Always

@@ -3,7 +3,7 @@ namespace: mediafactory
 
 image:
   repository: linuxserver/sonarr
-  tag: 3.0.10.1567-ls206
+  tag: 3.0.10.1567-ls207
   imagePullPolicy: IfNotPresent
 
 env:
@@ -35,6 +35,14 @@ persistence:
     enabled: false
     hostPath: 
     mountPath: /complete
+  customServices:
+    enabled: false
+    hostPath:
+    mountPath: /custom-services.d
+  customContInit:
+    enabled: false
+    hostPath:
+    mountPath: /custom-cont-init.d
 
 resources:
   requests:

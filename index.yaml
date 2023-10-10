@@ -1288,6 +1288,30 @@ entries:
   sonarr:
   - apiVersion: v2
     appVersion: 3.0.10
+    created: "2023-10-10T21:53:39.899010252Z"
+    description: Sonarr is a PVR for Usenet and BitTorrent users. It can monitor multiple
+      RSS feeds for new episodes of your favorite shows and will grab, sort and rename
+      them.
+    digest: 68291cc226c271129b77c6eb46bff3e0083a5f4ff9c47dfa07984a7f27015ac7
+    keywords:
+    - sonarr
+    - series
+    - shows
+    - pvr
+    - mediafactory
+    - torrent
+    - usenet
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: sonarr
+    type: application
+    urls:
+    - sonarr-0.5.2.tgz
+    version: 0.5.2
+  - apiVersion: v2
+    appVersion: 3.0.10
     created: "2023-09-20T21:26:09.830188048Z"
     description: Sonarr is a PVR for Usenet and BitTorrent users. It can monitor multiple
       RSS feeds for new episodes of your favorite shows and will grab, sort and rename
@@ -1647,4 +1671,4 @@ entries:
     urls:
     - wizarr-0.5.0.tgz
     version: 0.5.0
-generated: "2023-10-10T20:42:14.364344118Z"
+generated: "2023-10-10T21:53:39.899108652Z"

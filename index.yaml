@@ -816,6 +816,27 @@ entries:
   radarr:
   - apiVersion: v2
     appVersion: 5.0.3
+    created: "2023-10-10T20:42:14.363942716Z"
+    description: A fork of Sonarr to work with movies à la Couchpotato.
+    digest: ff4483ab953eb642cd0bf3ecf7f772d924fe271c85c895169cf8c959d28ae8ce
+    keywords:
+    - radarr
+    - movies
+    - pvr
+    - mediafactory
+    - torrent
+    - usenet
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: radarr
+    type: application
+    urls:
+    - radarr-0.5.5.tgz
+    version: 0.5.5
+  - apiVersion: v2
+    appVersion: 5.0.3
     created: "2023-10-10T20:32:41.203954617Z"
     description: A fork of Sonarr to work with movies à la Couchpotato.
     digest: df2a6a54db1c87e2ee6875eb1d9a52332c3f9053a76b1d629eb400ec9f9cdbab
@@ -1626,4 +1647,4 @@ entries:
     urls:
     - wizarr-0.5.0.tgz
     version: 0.5.0
-generated: "2023-10-10T20:32:41.204054917Z"
+generated: "2023-10-10T20:42:14.364344118Z"

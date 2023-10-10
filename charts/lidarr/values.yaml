@@ -3,7 +3,7 @@ namespace: mediafactory
 
 image:
   repository: linuxserver/lidarr
-  tag: 1.3.5.3530-ls135
+  tag: 1.4.5.3639-ls139
   imagePullPolicy: IfNotPresent
 
 env:
@@ -36,6 +36,14 @@ persistence:
     enabled: false
     hostPath: 
     mountPath: /complete
+  customServices:
+    enabled: false
+    hostPath:
+    mountPath: /custom-services.d
+  customContInit:
+    enabled: false
+    hostPath:
+    mountPath: /custom-cont-init.d
 
 resources:
   requests:

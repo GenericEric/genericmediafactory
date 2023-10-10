@@ -35,11 +35,11 @@ persistence:
     enabled: false
     hostPath: 
     mountPath: /complete
-  custom-services:
+  customServices:
     enabled: false
     hostPath:
     mountPath: /custom-services.d
-  custom-cont-init:
+  customContInit:
     enabled: false
     hostPath:
     mountPath: /custom-cont-init.d

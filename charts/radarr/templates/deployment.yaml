@@ -35,6 +35,8 @@ spec:
           value: "{{ .Values.env.PUID }}"
         - name: PGID
           value: "{{ .Values.env.PGID }}"
+        - name: DOCKER_MODS
+          value: linuxserver/mods:radarr-striptracks
         ports:
         - containerPort:  {{ .Values.service.port }}
           name:  {{ .Values.appName }}

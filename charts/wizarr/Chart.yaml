@@ -3,7 +3,7 @@ name: wizarr
 description: Wizarr is an advanced user invitation and management system for Jellyfin, Plex, Emby etc.
 appVersion: "3.5.1"
 type: application
-version: 0.6.1
+version: 0.6.2
 keywords:
   - wizarr
   - invitation

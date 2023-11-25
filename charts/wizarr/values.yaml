@@ -3,7 +3,7 @@ namespace: mediafactory
 
 image:
   repository: ghcr.io/wizarrrr/wizarr
-  tag: v3.5.1
+  tag: 3.5.1
   imagePullPolicy: IfNotPresent
 
 env:

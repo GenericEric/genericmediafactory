@@ -3,7 +3,7 @@ name: lidarr
 description: Lidarr is a music collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new tracks from your favorite artists and will grab, sort and rename them.
 appVersion: "1.4.5"
 type: application
-version: 0.5.3
+version: 0.5.4
 keywords:
   - lidarr
   - music

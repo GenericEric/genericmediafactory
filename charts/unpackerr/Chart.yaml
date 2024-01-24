@@ -1,9 +1,9 @@
 apiVersion: v2
 name: unpackerr
 description: This application runs as a daemon on your download host. It checks for completed downloads and extracts them so Lidarr, Radarr, Readarr, and Sonarr may import them.
-appVersion: "0.12.0"
+appVersion: "0.13.1"
 type: application
-version: 0.5.1
+version: 0.5.2
 keywords:
   - unpackerr
   - mediafactory

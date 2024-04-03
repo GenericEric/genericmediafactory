@@ -603,6 +603,29 @@ entries:
   overseerr:
   - apiVersion: v2
     appVersion: 1.33.2
+    created: "2024-04-03T07:04:22.51596597Z"
+    description: Overseerr is a free and open source software application for managing
+      requests for your media library. It integrates with your existing services,
+      such as Sonarr, Radarr, and Plex!
+    digest: 497ea6b1499f1a514fa3c1039db320e60ee0ce2da6d12c77b53ceebec6f887db
+    keywords:
+    - overseerr
+    - movies
+    - request
+    - mediafactory
+    - torrent
+    - usenet
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: overseerr
+    type: application
+    urls:
+    - https://github.com/GenericEric/genericmediafactory/releases/download/overseerr-0.5.4/overseerr-0.5.4.tgz
+    version: 0.5.4
+  - apiVersion: v2
+    appVersion: 1.33.2
     created: "2024-01-24T21:08:32.704912317Z"
     description: Overseerr is a free and open source software application for managing
       requests for your media library. It integrates with your existing services,
@@ -786,6 +809,27 @@ entries:
     - https://github.com/GenericEric/genericmediafactory/releases/download/overseerr-0.2.0/overseerr-0.2.0.tgz
     version: 0.2.0
   prowlarr:
+  - apiVersion: v2
+    appVersion: 1.15.0
+    created: "2024-04-03T07:04:22.595970303Z"
+    description: Prowlarr is a indexer manager/proxy built on the popular arr .net/reactjs
+      base stack to integrate with your various PVR apps.
+    digest: bad7146ca91190562183820eb597b6c3e67cb8db3ae861d9e5087caed6f2444e
+    keywords:
+    - prowlarr
+    - indexer
+    - mediafactory
+    - torrent
+    - usenet
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: prowlarr
+    type: application
+    urls:
+    - https://github.com/GenericEric/genericmediafactory/releases/download/prowlarr-0.5.4/prowlarr-0.5.4.tgz
+    version: 0.5.4
   - apiVersion: v2
     appVersion: 1.12.2
     created: "2024-01-24T21:08:32.787866248Z"
@@ -2178,4 +2222,4 @@ entries:
     urls:
     - wizarr-0.5.0.tgz
     version: 0.5.0
-generated: "2024-04-03T07:02:26.468175555Z"
+generated: "2024-04-03T07:04:22.596184843Z"

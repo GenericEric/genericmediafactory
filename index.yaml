@@ -1590,6 +1590,28 @@ entries:
     version: 0.2.0
   sabnzbdvpn:
   - apiVersion: v2
+    appVersion: 4.2.3
+    created: "2024-04-03T07:07:40.729567549Z"
+    description: SABnzbd is an Open Source Binary Newsreader written in Python.
+    digest: 73a86693683e33290b89297c3dc46129afacd085b807b9888dbb99c2f035a7b4
+    keywords:
+    - sabnzbd
+    - vpn
+    - music
+    - pvr
+    - mediafactory
+    - torrent
+    - usenet
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: sabnzbdvpn
+    type: application
+    urls:
+    - https://github.com/GenericEric/genericmediafactory/releases/download/sabnzbdvpn-0.5.4/sabnzbdvpn-0.5.4.tgz
+    version: 0.5.4
+  - apiVersion: v2
     appVersion: 4.2.1
     created: "2024-01-24T21:08:33.07608251Z"
     description: SABnzbd is an Open Source Binary Newsreader written in Python.
@@ -2264,4 +2286,4 @@ entries:
     urls:
     - wizarr-0.5.0.tgz
     version: 0.5.0
-generated: "2024-04-03T07:06:42.376277427Z"
+generated: "2024-04-03T07:07:40.729918927Z"

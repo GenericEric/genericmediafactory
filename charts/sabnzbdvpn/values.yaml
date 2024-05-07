@@ -3,7 +3,7 @@ namespace: mediafactory
 
 image:
   repository: binhex/arch-sabnzbdvpn
-  tag: 4.2.3-1-06
+  tag: 4.3.1-1-01
   imagePullPolicy: IfNotPresent
 
 env:

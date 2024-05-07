@@ -1,9 +1,9 @@
 apiVersion: v2
 name: sabnzbdvpn
 description: SABnzbd is an Open Source Binary Newsreader written in Python.
-appVersion: "4.2.3"
+appVersion: "4.3.1"
 type: application
-version: 0.5.4
+version: 0.5.5
 keywords:
   - sabnzbd
   - vpn

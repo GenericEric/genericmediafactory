@@ -3,7 +3,7 @@ namespace: mediafactory
 
 image:
   repository: linuxserver/readarr
-  tag: nightly-0.3.22.2488-ls289
+  tag: nightly-0.3.27.2532-ls302
   imagePullPolicy: IfNotPresent
 
 env:

@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.appName }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app:  {{ .Values.appName }}
+spec:
+  selector:
+    app: {{ .Values.appName }}
+  type: ClusterIP
+  ports:
+  - name: "{{ .Values.appName }}-gui"
+    protocol: TCP
+    port: {{ .Values.service.port }}
+    targetPort: {{ .Values.service.port }}
+  - name: bittorrent
+    protocol: TCP
+    port: 6881
+    targetPort: 6881
+  - name: bittorrentudp
+    protocol: UDP
+    port: 6881
+    targetPort: 6881
+  - name: privoxy
+    protocol: TCP
+    port: 8118
+    targetPort: 8118

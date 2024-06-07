@@ -1,0 +1,58 @@
+appName: qbittorrent-vpn
+namespace: mediafactory
+
+image:
+  repository: binhex/arch-qbittorrentvpn
+  tag: 4.6.5-1-04
+  imagePullPolicy: IfNotPresent
+
+env:
+  TZ: America/Chicago
+  PGID: 568
+  PUID: 568
+  WEBUI_PORT: 8080
+  DEBUG: false
+
+# For more info, visit https://github.com/binhex/arch-qbittorrentvpn/blob/master/README.md
+vpn:
+  VPN_ENABLED: yes
+  VPN_USER: ""
+  VPN_PASS: ""
+  VPN_PROV: protonvpn #<pia|airvpn|protonvpn|custom>
+  VPN_CLIENT: wireguard #<openvpn|wireguard>
+  VPN_OPTIONS: ""
+  STRICT_PORT_FORWARD: yes
+  ENABLE_PRIVOXY: no
+  ENABLE_STARTUP_SCRIPTS: no
+  LAN_NETWORK: 10.10.10.0/24,192.168.0/24
+  NAME_SERVERS: 1.1.1.1,1.0.0.1
+
+ingress:
+  host: qbittorrent.example.com
+
+service:
+  port: 8080
+
+persistence:
+  config:
+    hostPath: /home/apps/qbittorrent
+    mountPath: /config
+  backups:
+    enabled: false
+    existingClaim: 
+    mountPath: /backups
+  downloads: 
+    hostPath: /mnt/nas/downloads
+    mountPath: /downloads
+  complete:
+    enabled: false
+    hostPath: /mnt/nas/complete
+    mountPath: /complete
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 50Mi
+  limits:
+    cpu: 4000m
+    memory: 2000Mi

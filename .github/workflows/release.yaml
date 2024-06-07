@@ -17,6 +17,7 @@ on:
       - 'charts/sabnzbdvpn/**'
       - 'charts/jellyseerr/**'
       - 'charts/wizarr/**'
+      - 'charts/qbittorrent-vpn/**'
 
 jobs:
   release:

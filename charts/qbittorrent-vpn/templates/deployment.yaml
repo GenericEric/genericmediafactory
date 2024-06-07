@@ -1,0 +1,104 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  {{ .Values.appName }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app:  {{ .Values.appName }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Values.appName }}
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app:  {{ .Values.appName }}
+    spec:
+      containers:
+      - name: {{ .Values.appName }}
+        image:  "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        imagePullPolicy: {{ .Values.image.imagePullPolicy }}
+        resources:
+          requests:
+            cpu: {{ .Values.resources.requests.cpu }}
+            memory: {{ .Values.resources.requests.memory }}
+          limits:
+            cpu: {{ .Values.resources.limits.cpu }}
+            memory: {{ .Values.resources.limits.memory }}
+        securityContext:
+          privileged: true
+          sysctls:
+            - name: net.ipv4.conf.all.src_valid_mark
+              value: '1'
+          capabilities:
+            add: ["NET_ADMIN"]
+        env:
+        - name: TZ
+          value: "{{ .Values.env.TZ }}"
+        - name: PUID
+          value: "{{ .Values.env.PUID }}"
+        - name: PGID
+          value: "{{ .Values.env.PGID }}"
+        - name: VPN_ENABLED
+          value: "{{ .Values.vpn.VPN_ENABLED }}"
+        - name: VPN_CLIENT
+          value: "{{ .Values.vpn.VPN_CLIENT }}"
+        - name: VPN_OPTIONS
+          value: "{{ .Values.vpn.VPN_OPTIONS }}"
+        - name: STRICT_PORT_FORWARD
+          value: "{{ .Values.vpn.STRICT_PORT_FORWARD }}"
+        - name: ENABLE_PRIVOXY
+          value: "{{ .Values.vpn.ENABLE_PRIVOXY }}"
+        - name: ENABLE_STARTUP_SCRIPTS
+          value: "{{ .Values.vpn.ENABLE_STARTUP_SCRIPTS }}"
+        - name: DEBUG
+          value: "{{ .Values.env.DEBUG }}"
+        - name: WEBUI_PORT
+          value: "{{ .Values.env.WEBUI_PORT }}"
+        - name: VPN_USER
+          value: "{{ .Values.vpn.VPN_USER }}"
+        - name: VPN_PASS
+          value: "{{ .Values.vpn.VPN_PASS }}"
+        - name: VPN_PROV
+          value: "{{ .Values.vpn.VPN_PROV }}"
+        - name: LAN_NETWORK
+          value: "{{ .Values.vpn.LAN_NETWORK }}"
+        - name: NAME_SERVERS
+          value: "{{ .Values.vpn.NAME_SERVERS }}"
+        ports:
+        - containerPort:  {{ .Values.service.port }}
+          name:  {{ .Values.appName }}
+        volumeMounts:
+        - name: config
+          mountPath: {{ .Values.persistence.config.mountPath }}
+{{ if .Values.persistence.backups.enabled }}
+        - name: backups
+          mountPath: {{ .Values.persistence.backups.mountPath }}
+{{ end }}
+        - name: downloads
+          mountPath: {{ .Values.persistence.downloads.mountPath }}
+{{ if .Values.persistence.complete.enabled }}
+        - name: complete
+          mountPath: {{ .Values.persistence.complete.mountPath }}
+{{ end }}
+      volumes:
+        - name: config
+          hostPath:
+            path: {{ .Values.persistence.config.hostPath }}
+{{ if .Values.persistence.backups.enabled }}
+        - name: backups
+          persistentVolumeClaim:
+            claimName: {{ .Values.persistence.backups.existingClaim }}
+{{ end }}
+        - name: downloads
+          hostPath:
+            path: {{ .Values.persistence.downloads.hostPath }}
+{{ if .Values.persistence.complete.enabled }}
+        - name: complete
+          hostPath:
+            path: {{ .Values.persistence.complete.hostPath }}
+{{ end }}
+      restartPolicy: Always

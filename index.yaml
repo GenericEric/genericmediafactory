@@ -298,6 +298,29 @@ entries:
     version: 0.1.0
   jellyseerr:
   - apiVersion: v2
+    appVersion: 1.9.0
+    created: "2024-06-07T18:03:25.936710415Z"
+    description: Jellyseerr is a free and open source fork of Overseerr for managing
+      requests for your media library. It integrates with your existing services,
+      such as Sonarr, Radarr, and Jellyfin!
+    digest: e019018d69f4f70cbbb913a3446268842a5897221270db1e65da871d29dee480
+    keywords:
+    - jellyseerr
+    - movies
+    - request
+    - mediafactory
+    - torrent
+    - usenet
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: jellyseerr
+    type: application
+    urls:
+    - https://github.com/GenericEric/genericmediafactory/releases/download/jellyseerr-0.5.3/jellyseerr-0.5.3.tgz
+    version: 0.5.3
+  - apiVersion: v2
     appVersion: 1.8.1
     created: "2024-05-07T17:54:47.120434168Z"
     description: Jellyseerr is a free and open source fork of Overseerr for managing
@@ -2594,4 +2617,4 @@ entries:
     urls:
     - wizarr-0.5.0.tgz
     version: 0.5.0
-generated: "2024-06-07T18:02:48.562440033Z"
+generated: "2024-06-07T18:03:25.937024383Z"

@@ -1307,6 +1307,26 @@ entries:
   qbittorrent:
   - apiVersion: v2
     appVersion: 4.5.1
+    created: "2024-06-07T18:07:35.239269055Z"
+    description: qBittorrent is a cross-platform free and open-source BitTorrent client
+    digest: 3164378da3eba32d7f3639cf301e7a7a705500666a1c9fcbad961fd6a29dd4aa
+    keywords:
+    - qbittorrent
+    - downloader
+    - mediafactory
+    - torrent
+    - usenet
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: qbittorrent
+    type: application
+    urls:
+    - https://github.com/GenericEric/genericmediafactory/releases/download/qbittorrent-0.3.1/qbittorrent-0.3.1.tgz
+    version: 0.3.1
+  - apiVersion: v2
+    appVersion: 4.5.1
     created: "2023-03-23T20:38:38.5957203Z"
     description: qBittorrent is a cross-platform free and open-source BitTorrent client
     digest: 5312f8b106e3d8d3fb1e310a9460b38b4c6fa7a97c8b62330b8158c39b3410d9
@@ -2684,4 +2704,4 @@ entries:
     urls:
     - wizarr-0.5.0.tgz
     version: 0.5.0
-generated: "2024-06-07T18:06:32.816230944Z"
+generated: "2024-06-07T18:07:35.239600206Z"

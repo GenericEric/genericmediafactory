@@ -3,7 +3,7 @@ namespace: mediafactory
 
 image:
   repository: dyonr/qbittorrentvpn
-  tag: latest
+  tag: latest@sha256:d5c50beb560880303cfa4144411ab04311134d6c2c052a0e6a97b93441b5e3c6
   imagePullPolicy: IfNotPresent
 
 env:

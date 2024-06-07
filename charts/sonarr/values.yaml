@@ -3,7 +3,7 @@ namespace: mediafactory
 
 image:
   repository: linuxserver/sonarr
-  tag: 4.0.4.1491-ls237
+  tag: 4.0.5.1710-ls241
   imagePullPolicy: IfNotPresent
 
 env:

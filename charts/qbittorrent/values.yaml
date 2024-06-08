@@ -1,3 +1,4 @@
+#this chart is depreciated in favor of the qbittorrent-vpn chart. No updates will be made.
 appName: qbittorrent
 namespace: mediafactory
 

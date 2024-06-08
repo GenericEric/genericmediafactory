@@ -1,9 +1,9 @@
 apiVersion: v2
 name: qbittorrent
-description: qBittorrent is a cross-platform free and open-source BitTorrent client
-appVersion: "4.5.1"
+description: This Chart is depreciated. Please use qbittorrent-vpn chart.
+appVersion: "4.5.2"
 type: application
-version: 0.3.1
+version: 0.3.2
 keywords:
   - qbittorrent
   - downloader

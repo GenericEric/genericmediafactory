@@ -1306,6 +1306,26 @@ entries:
     version: 0.2.0
   qbittorrent:
   - apiVersion: v2
+    appVersion: 4.5.2
+    created: "2024-06-08T00:19:57.30766012Z"
+    description: This Chart is depreciated. Please use qbittorrent-vpn chart.
+    digest: 1196f1186b0ea603074f1b40b560e9f11b174578547cfa9ec2b25a40cb04b6ad
+    keywords:
+    - qbittorrent
+    - downloader
+    - mediafactory
+    - torrent
+    - usenet
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: qbittorrent
+    type: application
+    urls:
+    - https://github.com/GenericEric/genericmediafactory/releases/download/qbittorrent-0.3.2/qbittorrent-0.3.2.tgz
+    version: 0.3.2
+  - apiVersion: v2
     appVersion: 4.5.1
     created: "2024-06-07T18:07:35.239269055Z"
     description: qBittorrent is a cross-platform free and open-source BitTorrent client
@@ -2878,4 +2898,4 @@ entries:
     urls:
     - wizarr-0.5.0.tgz
     version: 0.5.0
-generated: "2024-06-07T21:17:11.66619758Z"
+generated: "2024-06-08T00:19:57.307978684Z"

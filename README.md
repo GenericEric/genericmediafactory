@@ -5,7 +5,7 @@ These Helm charts are meant to deploy a full-on factory to manage all aspects of
 
 | App        | Description                                                                                            |
 |:-----------|:-------------------------------------------------------------------------------------------------------|
-|[qBittorrent](https://github.com/DyonR/docker-qbittorrentvpn) | Handles downloading your non copyrighted media from places like LegitTorrents or the Internet Archive. VPN enabled in case torrents are not allowed on your network. |
+|[qBittorrent](https://github.com/binhex/arch-qbittorrentvpn) | Handles downloading your non copyrighted media from places like LegitTorrents or the Internet Archive. VPN enabled in case torrents are not allowed on your network. |
 |[SABnzbd](https://github.com/binhex/arch-sabnzbdvpn) | Newsreader for accessing Usenet resources. VPN enabled as well. |
 |[Radarr](https://github.com/linuxserver/docker-radarr) | Movie collection manager |
 |[Sonarr](https://github.com/linuxserver/docker-sonarr) | Series collection manager |

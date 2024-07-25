@@ -804,6 +804,29 @@ entries:
   overseerr:
   - apiVersion: v2
     appVersion: 1.33.2
+    created: "2024-07-25T17:31:25.271003012Z"
+    description: Overseerr is a free and open source software application for managing
+      requests for your media library. It integrates with your existing services,
+      such as Sonarr, Radarr, and Plex!
+    digest: 2630d815d48ddaadfbd4da96404297fa0f58ab241453f146e2d08557ebd69d7b
+    keywords:
+    - overseerr
+    - movies
+    - request
+    - mediafactory
+    - torrent
+    - usenet
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: overseerr
+    type: application
+    urls:
+    - https://github.com/GenericEric/genericmediafactory/releases/download/overseerr-0.5.7/overseerr-0.5.7.tgz
+    version: 0.5.7
+  - apiVersion: v2
+    appVersion: 1.33.2
     created: "2024-06-07T18:04:34.86720358Z"
     description: Overseerr is a free and open source software application for managing
       requests for your media library. It integrates with your existing services,
@@ -2965,4 +2988,4 @@ entries:
     urls:
     - wizarr-0.5.0.tgz
     version: 0.5.0
-generated: "2024-07-25T17:29:46.665948124Z"
+generated: "2024-07-25T17:31:25.271239102Z"

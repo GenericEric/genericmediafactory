@@ -3,7 +3,7 @@ namespace: mediafactory
 
 image:
   repository: binhex/arch-qbittorrentvpn
-  tag: 4.6.5-1-07
+  tag: 4.6.7-1-01
   imagePullPolicy: IfNotPresent
 
 env:

@@ -3,7 +3,7 @@ namespace: mediafactory
 
 image:
   repository: linuxserver/prowlarr
-  tag: 1.23.1.4708-ls87
+  tag: 1.25.4.4818-ls90
   imagePullPolicy: Always
 
 env:

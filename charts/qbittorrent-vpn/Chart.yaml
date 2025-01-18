@@ -1,9 +1,9 @@
 apiVersion: v2
 name: qbittorrent-vpn
 description: qBittorrent is a cross-platform free and open-source BitTorrent client
-appVersion: "5.0.2"
+appVersion: "5.0.3"
 type: application
-version: 0.0.6
+version: 0.0.7
 keywords:
   - qbittorrent
   - vpn

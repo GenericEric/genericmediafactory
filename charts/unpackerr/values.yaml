@@ -3,7 +3,7 @@ namespace: mediafactory
 
 image:
   repository: hotio/unpackerr
-  tag: release-0.14.5
+  tag: release-241712e
   imagePullPolicy: IfNotPresent
 
 env:

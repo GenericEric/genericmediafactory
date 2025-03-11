@@ -3,7 +3,7 @@ name: jellyseerr
 description: Jellyseerr is a free and open source fork of Overseerr for managing requests for your media library. It integrates with your existing services, such as Sonarr, Radarr, and Jellyfin!
 appVersion: "2.5.0"
 type: application
-version: 0.5.8
+version: 0.5.9
 keywords:
   - jellyseerr
   - movies

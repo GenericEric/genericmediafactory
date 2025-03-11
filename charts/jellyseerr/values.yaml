@@ -3,13 +3,26 @@ namespace: mediafactory
 
 image:
   repository: fallenbagel/jellyseerr
-  tag: 2.3.0
+  tag: 2.5.0
   imagePullPolicy: IfNotPresent
 
 env:
   TZ: America/Chicago
   PGID: 568
   PUID: 568
+
+database:
+  sqlite:
+    enabled: true
+    logQueries: false
+  postgresql:
+    enabled: false
+    host: "127.0.0.1"
+    port: "5432"
+    user: "jellyseerr"
+    password: "securepassword"
+    dbName: "jellyseerr"
+    logQueries: "false"
 
 ingress:
   host: jellyseerr.example.com

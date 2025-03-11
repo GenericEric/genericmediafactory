@@ -29,6 +29,28 @@ spec:
             cpu: {{ .Values.resources.limits.cpu }}
             memory: {{ .Values.resources.limits.memory }}
         env:
+{{ if .Values.database.sqlite.enabled }}
+        - name: DB_TYPE
+          value: "sqlite"
+        - name: DB_LOG_QUERIES
+          value: "{{ .Values.database.sqlite.logQueries }}"
+{{ end }}
+{{ if .Values.database.postgresql.enabled }}
+        - name: DB_TYPE
+          value: "postgres"
+        - name: DB_HOST
+          value: "{{ .Values.database.postgresql.host }}"
+        - name: DB_PORT
+          value: "{{ .Values.database.postgresql.port }}"
+        - name: DB_USER
+          value: "{{ .Values.database.postgresql.user }}"
+        - name: DB_PASS
+          value: "{{ .Values.database.postgresql.password }}"
+        - name: DB_NAME
+          value: "{{ .Values.database.postgresql.dbName }}"
+        - name: DB_LOG_QUERIES
+          value: "{{ .Values.database.postgresql.logQueries }}"
+{{ end }}
         - name: TZ
           value: "{{ .Values.env.TZ }}"
         - name: PUID

@@ -1835,6 +1835,27 @@ entries:
     version: 0.2.0
   qbittorrent-vpn:
   - apiVersion: v2
+    appVersion: 5.0.4
+    created: "2025-03-11T19:37:42.875942982Z"
+    description: qBittorrent is a cross-platform free and open-source BitTorrent client
+    digest: 2836e082a4b9773ae1492307f8067add47cdc0d5b29628a7ae33ff2951ed5344
+    keywords:
+    - qbittorrent
+    - vpn
+    - downloader
+    - mediafactory
+    - torrent
+    - usenet
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: qbittorrent-vpn
+    type: application
+    urls:
+    - https://github.com/GenericEric/genericmediafactory/releases/download/qbittorrent-vpn-0.0.8/qbittorrent-vpn-0.0.8.tgz
+    version: 0.0.8
+  - apiVersion: v2
     appVersion: 5.0.3
     created: "2025-01-18T19:33:10.877366132Z"
     description: qBittorrent is a cross-platform free and open-source BitTorrent client
@@ -3933,4 +3954,4 @@ entries:
     urls:
     - wizarr-0.5.0.tgz
     version: 0.5.0
-generated: "2025-01-18T19:33:11.672353741Z"
+generated: "2025-03-11T19:37:42.876314476Z"

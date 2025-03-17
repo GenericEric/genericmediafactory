@@ -3,7 +3,7 @@ namespace: mediafactory
 
 image:
   repository: fallenbagel/jellyseerr
-  tag: 2.5.0
+  tag: 2.5.1
   imagePullPolicy: IfNotPresent
 
 env:

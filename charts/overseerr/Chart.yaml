@@ -3,7 +3,7 @@ name: overseerr
 description: Overseerr is a free and open source software application for managing requests for your media library. It integrates with your existing services, such as Sonarr, Radarr, and Plex!
 appVersion: "1.34.0"
 type: application
-version: 0.6.3
+version: 0.6.4
 keywords:
   - overseerr
   - movies

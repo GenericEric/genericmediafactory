@@ -1,9 +1,9 @@
 apiVersion: v2
 name: wizarr
 description: Wizarr is an advanced user invitation and management system for Jellyfin, Plex, Emby etc.
-appVersion: "4.2.0"
+appVersion: "2025.6.3"
 type: application
-version: 0.6.5
+version: 0.6.6
 keywords:
   - wizarr
   - invitation

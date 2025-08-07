@@ -3,7 +3,8 @@ namespace: mediafactory
 
 image:
   repository: ghcr.io/hotio/unpackerr
-  imagePullPolicy: IfNotPresent
+  tag: latest
+  imagePullPolicy: Always
 
 env:
   TZ: America/Chicago

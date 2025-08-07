@@ -4525,6 +4525,27 @@ entries:
   unpackerr:
   - apiVersion: v2
     appVersion: 0.14.5
+    created: "2025-08-07T18:29:57.036989179Z"
+    description: This application runs as a daemon on your download host. It checks
+      for completed downloads and extracts them so Lidarr, Radarr, Readarr, and Sonarr
+      may import them.
+    digest: 85a2afa6efdcafb69f16b6bfb1fa842a9ac0a873d355ec0c2ed7e1e005314fd1
+    keywords:
+    - unpackerr
+    - mediafactory
+    - torrent
+    - usenet
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: unpackerr
+    type: application
+    urls:
+    - https://github.com/GenericEric/genericmediafactory/releases/download/unpackerr-0.6.4/unpackerr-0.6.4.tgz
+    version: 0.6.4
+  - apiVersion: v2
+    appVersion: 0.14.5
     created: "2025-08-07T17:45:18.249644845Z"
     description: This application runs as a daemon on your download host. It checks
       for completed downloads and extracts them so Lidarr, Radarr, Readarr, and Sonarr
@@ -5143,4 +5164,4 @@ entries:
     urls:
     - wizarr-0.5.0.tgz
     version: 0.5.0
-generated: "2025-08-07T17:45:18.367923544Z"
+generated: "2025-08-07T18:29:57.037391633Z"

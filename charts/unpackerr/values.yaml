@@ -2,8 +2,7 @@ appName: unpackerr
 namespace: mediafactory
 
 image:
-  repository: hotio/unpackerr
-  tag: release-bcb845c
+  repository: ghcr.io/hotio/unpackerr
   imagePullPolicy: IfNotPresent
 
 env:

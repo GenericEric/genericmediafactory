@@ -3,7 +3,7 @@ name: qbittorrent-vpn
 description: qBittorrent is a cross-platform free and open-source BitTorrent client
 appVersion: "5.1.2"
 type: application
-version: 0.1.1
+version: 0.1.2
 keywords:
   - qbittorrent
   - vpn

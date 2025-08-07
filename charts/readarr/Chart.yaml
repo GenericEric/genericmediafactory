@@ -1,9 +1,9 @@
 apiVersion: v2
 name: readarr
 description: Book Manager and Automation (Sonarr for Ebooks)
-appVersion: "0.4.17"
+appVersion: "0.4.19"
 type: application
-version: 0.6.2
+version: 0.6.3
 keywords:
   - readarr
   - books

@@ -1,9 +1,9 @@
-appName: sonarr
+appName: headphones
 namespace: mediafactory
 
 image:
-  repository: linuxserver/sonarr
-  tag: 4.0.15.2941-ls292
+  repository: linuxserver/headphones
+  tag: version-a78f38c1
   imagePullPolicy: IfNotPresent
 
 env:
@@ -12,10 +12,10 @@ env:
   PUID: 568
 
 ingress:
-  host: sonarr.example.com
+  host: headphones.example.com
 
 service:
-  port: 8989
+  port: 8181
 
 persistence:
   config:
@@ -25,29 +25,22 @@ persistence:
     enabled: false
     existingClaim: 
     mountPath: /backups
-  series:
+  music:
     existingClaim: 
-    mountPath: /media/series
+    storageClass:
+    mountPath: /media/music
   downloads: 
     hostPath: 
-    mountPath: /downloads
+    mountPath: /downloads/downloads
   complete:
     enabled: false
     hostPath: 
-    mountPath: /complete
-  customServices:
-    enabled: false
-    hostPath:
-    mountPath: /custom-services.d
-  customContInit:
-    enabled: false
-    hostPath:
-    mountPath: /custom-cont-init.d
+    mountPath: /downloads/complete
 
 resources:
   requests:
     cpu: 100m
-    memory: 50Mi
+    memory: 60Mi
   limits:
     cpu: 4000m
     memory: 2000Mi

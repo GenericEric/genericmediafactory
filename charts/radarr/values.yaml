@@ -3,7 +3,7 @@ namespace: mediafactory
 
 image:
   repository: linuxserver/radarr
-  tag: 5.26.2.10099-ls279
+  tag: 5.27.5.10198-ls283
   imagePullPolicy: IfNotPresent
 
 env:

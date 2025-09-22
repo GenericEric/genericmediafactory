@@ -3,7 +3,7 @@ name: sonarr
 description: Sonarr is a PVR for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them.
 appVersion: "4.0.15"
 type: application
-version: 0.6.7
+version: 0.6.8
 keywords:
   - sonarr
   - series

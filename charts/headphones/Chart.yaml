@@ -1,0 +1,17 @@
+apiVersion: v2
+name: headphones
+description: Headphones is an automated music downloader for NZB and Torrent, written in Python. It supports SABnzbd, NZBget, Transmission, µTorrent and Blackhole.
+appVersion: "a78f38c1"
+type: application
+version: 0.0.1
+keywords:
+  - headphones
+  - music
+  - pvr
+  - mediafactory
+  - torrent
+  - usenet
+maintainers:
+  - name: GenericEric
+    email: eric@bgeneric.net
+    url: https://bgeneric.net

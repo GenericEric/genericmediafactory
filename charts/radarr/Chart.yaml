@@ -1,9 +1,9 @@
 apiVersion: v2
 name: radarr
 description: A fork of Sonarr to work with movies à la Couchpotato.
-appVersion: "5.26.2"
+appVersion: "5.27.5"
 type: application
-version: 0.7.1
+version: 0.7.2
 keywords:
   - radarr
   - movies

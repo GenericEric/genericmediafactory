@@ -75,9 +75,16 @@ spec:
         - name: music
           persistentVolumeClaim:
             claimName: {{ .Values.persistence.music.existingClaim }}
-        - name: downloads
+{{ if .Values.persistence.torrent.enabled }}
+        - name: torrent
           hostPath:
-            path: {{ .Values.persistence.downloads.hostPath }}
+            path: {{ .Values.persistence.torrent.hostPath }}
+{{ end }}
+{{ if .Values.persistence.news.enabled }}
+        - name: news
+          hostPath:
+            path: {{ .Values.persistence.news.hostPath }}
+{{ end }}
 {{ if .Values.persistence.customServices.enabled }}
         - name: custom-services
           hostPath:

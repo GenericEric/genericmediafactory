@@ -71,23 +71,9 @@ persistence:
     enabled: false
     hostPath: 
     mountPath: /config
-  movies:
+  torrent:
     hostPath: 
-    mountPath: /complete/movies
-  series:
-    hostPath: 
-    mountPath: /complete/series
-  music:
-    hostPath: 
-    mountPath: /complete/music
-  books:
-    hostPath: 
-    mountPath: /complete/books
-  downloads:
-    enabled: false
-    hostPath:
-    mountPath:
-  
+    mountPath: /torrent
 
 service:
   port: 8989

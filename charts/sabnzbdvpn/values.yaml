@@ -35,13 +35,9 @@ persistence:
     enabled: false
     existingClaim: 
     mountPath: /backups
-  downloads: 
+  news: 
     hostPath: /mnt/nas/downloads
-    mountPath: /downloads
-  complete:
-    enabled: false
-    hostPath: /mnt/nas/complete
-    mountPath: /complete
+    mountPath: /news
 
 resources:
   requests:

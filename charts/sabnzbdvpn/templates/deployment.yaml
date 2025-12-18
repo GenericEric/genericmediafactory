@@ -68,12 +68,8 @@ spec:
         - name: backups
           mountPath: {{ .Values.persistence.backups.mountPath }}
 {{ end }}
-        - name: downloads
-          mountPath: {{ .Values.persistence.downloads.mountPath }}
-{{ if .Values.persistence.complete.enabled }}
-        - name: complete
-          mountPath: {{ .Values.persistence.complete.mountPath }}
-{{ end }}
+        - name: news
+          mountPath: {{ .Values.persistence.news.mountPath }}
       volumes:
         - name: config
           hostPath:
@@ -83,12 +79,7 @@ spec:
           persistentVolumeClaim:
             claimName: {{ .Values.persistence.backups.existingClaim }}
 {{ end }}
-        - name: downloads
+        - name: news
           hostPath:
-            path: {{ .Values.persistence.downloads.hostPath }}
-{{ if .Values.persistence.complete.enabled }}
-        - name: complete
-          hostPath:
-            path: {{ .Values.persistence.complete.hostPath }}
-{{ end }}
+            path: {{ .Values.persistence.news.hostPath }}
       restartPolicy: Always

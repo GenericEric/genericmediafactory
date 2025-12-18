@@ -139,55 +139,15 @@ spec:
         - name: config
           mountPath: {{ .Values.persistence.config.mountPath }}
 {{ end }}
-{{ if .Values.radarr.enabled }}
-        - name: movies
-          mountPath: {{ .Values.persistence.movies.mountPath }}
-{{ end }}
-{{ if .Values.sonarr.enabled }}
-        - name: series
-          mountPath: {{ .Values.persistence.series.mountPath }}
-{{ end }}
-{{ if .Values.lidarr.enabled }}
-        - name: music
-          mountPath: {{ .Values.persistence.music.mountPath }}
-{{ end }}
-{{ if .Values.readarr.enabled }}
-        - name: books
-          mountPath: {{ .Values.persistence.books.mountPath }}
-{{ end }}
-{{ if .Values.persistence.downloads.enabled }}
-        - name: downloads
-          mountPath: {{ .Values.persistence.downloads.mountPath }}
-{{ end }}
+        - name: torrent
+          mountPath: {{ .Values.persistence.torrent.mountPath }}
       volumes:
 {{ if .Values.persistence.enabled }}
         - name: config
           hostPath:
             path: {{ .Values.persistence.config.hostPath }}
 {{ end }}
-{{ if .Values.radarr.enabled }}
-        - name: movies
+        - name: torrent
           hostPath:
-            path: {{ .Values.persistence.movies.hostPath }}
-{{ end }}
-{{ if .Values.sonarr.enabled }}
-        - name: series
-          hostPath:
-            path: {{ .Values.persistence.series.hostPath }}
-{{ end }}
-{{ if .Values.lidarr.enabled }}
-        - name: music
-          hostPath:
-            path: {{ .Values.persistence.music.hostPath }}
-{{ end }}
-{{ if .Values.readarr.enabled }}
-        - name: books
-          hostPath:
-            path: {{ .Values.persistence.books.hostPath }}
-{{ end }}
-{{ if .Values.persistence.downloads.enabled }}
-        - name: downloads
-          hostPath:
-            path: {{ .Values.persistence.downloads.hostPath }}
-{{ end }}
+            path: {{ .Values.persistence.torrent.hostPath }}
       restartPolicy: Always

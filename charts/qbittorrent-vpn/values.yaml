@@ -41,13 +41,9 @@ persistence:
     enabled: false
     existingClaim: 
     mountPath: /backups
-  downloads: 
+  torrent: 
     hostPath: /mnt/nas/downloads
-    mountPath: /downloads
-  complete:
-    enabled: false
-    hostPath: /mnt/nas/complete
-    mountPath: /complete
+    mountPath: /torrent
 
 resources:
   requests:

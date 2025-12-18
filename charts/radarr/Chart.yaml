@@ -3,7 +3,7 @@ name: radarr
 description: A fork of Sonarr to work with movies à la Couchpotato.
 appVersion: "5.27.5"
 type: application
-version: 0.7.2
+version: 0.7.3
 keywords:
   - radarr
   - movies

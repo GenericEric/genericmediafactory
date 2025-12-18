@@ -49,11 +49,13 @@ spec:
 {{ end }}
         - name: series
           mountPath: {{ .Values.persistence.series.mountPath }}
-        - name: downloads
-          mountPath: {{ .Values.persistence.downloads.mountPath }}
-{{ if .Values.persistence.complete.enabled }}
-        - name: complete
-          mountPath: {{ .Values.persistence.complete.mountPath }}
+{{ if .Values.persistence.torrent.enabled }}
+        - name: torrent
+          mountPath: {{ .Values.persistence.torrent.mountPath }}
+{{ end }}
+{{ if .Values.persistence.news.enabled }}
+        - name: news
+          mountPath: {{ .Values.persistence.news.mountPath }}
 {{ end }}
 {{ if .Values.persistence.customServices.enabled }}
         - name: custom-services
@@ -75,13 +77,15 @@ spec:
         - name: series
           persistentVolumeClaim:
             claimName: {{ .Values.persistence.series.existingClaim }}
-        - name: downloads
+{{ if .Values.persistence.torrent.enabled }}
+        - name: torrent
           hostPath:
-            path: {{ .Values.persistence.downloads.hostPath }}
-{{ if .Values.persistence.complete.enabled }}
-        - name: complete
+            path: {{ .Values.persistence.torrent.hostPath }}
+{{ end }}
+{{ if .Values.persistence.news.enabled }}
+        - name: news
           hostPath:
-            path: {{ .Values.persistence.complete.hostPath }}
+            path: {{ .Values.persistence.news.hostPath }}
 {{ end }}
 {{ if .Values.persistence.customServices.enabled }}
         - name: custom-services

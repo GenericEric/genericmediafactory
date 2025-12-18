@@ -29,13 +29,14 @@ persistence:
     existingClaim: 
     storageClass:
     mountPath: /media/music
-  downloads: 
-    hostPath: 
-    mountPath: /downloads
-  complete:
+  torrent:
     enabled: false
     hostPath: 
-    mountPath: /complete
+    mountPath: /torrent
+  news:
+    enabled: false
+    hostPath:
+    mountPath: /news
   customServices:
     enabled: false
     hostPath:

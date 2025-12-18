@@ -752,6 +752,29 @@ entries:
   lidarr:
   - apiVersion: v2
     appVersion: 2.13.3
+    created: "2025-12-18T18:01:50.747610178Z"
+    description: Lidarr is a music collection manager for Usenet and BitTorrent users.
+      It can monitor multiple RSS feeds for new tracks from your favorite artists
+      and will grab, sort and rename them.
+    digest: 9fc5e2590a5ca555432b67793404d91c9296c57eece516ccf1e5a9cd2302c6a6
+    keywords:
+    - lidarr
+    - music
+    - pvr
+    - mediafactory
+    - torrent
+    - usenet
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: lidarr
+    type: application
+    urls:
+    - https://github.com/GenericEric/genericmediafactory/releases/download/lidarr-0.7.2/lidarr-0.7.2.tgz
+    version: 0.7.2
+  - apiVersion: v2
+    appVersion: 2.13.3
     created: "2025-12-18T12:15:56.767426837Z"
     description: Lidarr is a music collection manager for Usenet and BitTorrent users.
       It can monitor multiple RSS feeds for new tracks from your favorite artists
@@ -2552,6 +2575,27 @@ entries:
   qbittorrent-vpn:
   - apiVersion: v2
     appVersion: 5.1.2
+    created: "2025-12-18T18:01:50.896278388Z"
+    description: qBittorrent is a cross-platform free and open-source BitTorrent client
+    digest: e5bd46859e6c8cc4d5457b754593cee359e0d13a0c50ff1f4eaaeb85539c6fbd
+    keywords:
+    - qbittorrent
+    - vpn
+    - downloader
+    - mediafactory
+    - torrent
+    - usenet
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: qbittorrent-vpn
+    type: application
+    urls:
+    - https://github.com/GenericEric/genericmediafactory/releases/download/qbittorrent-vpn-0.1.3/qbittorrent-vpn-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
+    appVersion: 5.1.2
     created: "2025-08-07T17:45:17.779681368Z"
     description: qBittorrent is a cross-platform free and open-source BitTorrent client
     digest: 8274e92934e71178384d0a6c8086fec05b49227018ce791347d02c32b2f2f3b0
@@ -2803,6 +2847,27 @@ entries:
     - https://github.com/GenericEric/genericmediafactory/releases/download/qbittorrent-vpn-0.0.1/qbittorrent-vpn-0.0.1.tgz
     version: 0.0.1
   radarr:
+  - apiVersion: v2
+    appVersion: 5.27.5
+    created: "2025-12-18T18:01:51.026504142Z"
+    description: A fork of Sonarr to work with movies à la Couchpotato.
+    digest: e456c676ccbf04585099572e4e73449a562d423831f38dda4091cd3b20c61da3
+    keywords:
+    - radarr
+    - movies
+    - pvr
+    - mediafactory
+    - torrent
+    - usenet
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: radarr
+    type: application
+    urls:
+    - https://github.com/GenericEric/genericmediafactory/releases/download/radarr-0.7.3/radarr-0.7.3.tgz
+    version: 0.7.3
   - apiVersion: v2
     appVersion: 5.27.5
     created: "2025-09-22T14:44:09.80257866Z"
@@ -3753,6 +3818,28 @@ entries:
   sabnzbdvpn:
   - apiVersion: v2
     appVersion: 4.5.3
+    created: "2025-12-18T18:01:51.164893525Z"
+    description: SABnzbd is an Open Source Binary Newsreader written in Python.
+    digest: df7c155198e996a3fa98a10c80c6c3e049e191c8c9fdf0884e3337b6ee3b191d
+    keywords:
+    - sabnzbd
+    - vpn
+    - music
+    - pvr
+    - mediafactory
+    - torrent
+    - usenet
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: sabnzbdvpn
+    type: application
+    urls:
+    - https://github.com/GenericEric/genericmediafactory/releases/download/sabnzbdvpn-0.6.5/sabnzbdvpn-0.6.5.tgz
+    version: 0.6.5
+  - apiVersion: v2
+    appVersion: 4.5.3
     created: "2025-09-22T14:44:09.937485169Z"
     description: SABnzbd is an Open Source Binary Newsreader written in Python.
     digest: 7c009366a442674ba8a9f5cbfb86754ef7a298c0dde06704fe81674b4975c4fd
@@ -4170,6 +4257,30 @@ entries:
     - https://github.com/GenericEric/genericmediafactory/releases/download/sabnzbdvpn-0.1.2/sabnzbdvpn-0.1.2.tgz
     version: 0.1.2
   sonarr:
+  - apiVersion: v2
+    appVersion: 4.0.15
+    created: "2025-12-18T18:01:51.320804541Z"
+    description: Sonarr is a PVR for Usenet and BitTorrent users. It can monitor multiple
+      RSS feeds for new episodes of your favorite shows and will grab, sort and rename
+      them.
+    digest: a08bd0e533a589f5821feee0e48968fb57404b6423403c8df034804a5be19f85
+    keywords:
+    - sonarr
+    - series
+    - shows
+    - pvr
+    - mediafactory
+    - torrent
+    - usenet
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: sonarr
+    type: application
+    urls:
+    - https://github.com/GenericEric/genericmediafactory/releases/download/sonarr-0.6.9/sonarr-0.6.9.tgz
+    version: 0.6.9
   - apiVersion: v2
     appVersion: 4.0.15
     created: "2025-09-22T14:44:10.073207203Z"
@@ -4747,6 +4858,27 @@ entries:
     - https://github.com/GenericEric/genericmediafactory/releases/download/sonarr-0.2.0/sonarr-0.2.0.tgz
     version: 0.2.0
   unpackerr:
+  - apiVersion: v2
+    appVersion: 0.14.5
+    created: "2025-12-18T18:01:51.609731903Z"
+    description: This application runs as a daemon on your download host. It checks
+      for completed downloads and extracts them so Lidarr, Radarr, Readarr, and Sonarr
+      may import them.
+    digest: 00363a1f2853ad406ec22cba2d024835470faea9e59d422121320b24d8ea3ee2
+    keywords:
+    - unpackerr
+    - mediafactory
+    - torrent
+    - usenet
+    maintainers:
+    - email: eric@bgeneric.net
+      name: GenericEric
+      url: https://bgeneric.net
+    name: unpackerr
+    type: application
+    urls:
+    - https://github.com/GenericEric/genericmediafactory/releases/download/unpackerr-0.6.6/unpackerr-0.6.6.tgz
+    version: 0.6.6
   - apiVersion: v2
     appVersion: 0.14.5
     created: "2025-08-07T18:36:58.104001762Z"
@@ -5431,4 +5563,4 @@ entries:
     urls:
     - wizarr-0.5.0.tgz
     version: 0.5.0
-generated: "2025-12-18T12:15:56.768180934Z"
+generated: "2025-12-18T18:01:51.610570898Z"

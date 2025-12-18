@@ -74,23 +74,21 @@ spec:
         volumeMounts:
         - name: config
           mountPath: {{ .Values.persistence.config.mountPath }}
-{{ if .Values.persistence.backups.enabled }}
+        {{ if .Values.persistence.backups.enabled }}
         - name: backups
           mountPath: {{ .Values.persistence.backups.mountPath }}
-{{ end }}
+        {{ end }}
         - name: torrent
           mountPath: {{ .Values.persistence.torrent.mountPath }}
       volumes:
         - name: config
           hostPath:
             path: {{ .Values.persistence.config.hostPath }}
-{{ if .Values.persistence.backups.enabled }}
+          {{ if .Values.persistence.backups.enabled }}
         - name: backups
           persistentVolumeClaim:
             claimName: {{ .Values.persistence.backups.existingClaim }}
-{{ end }}
+          {{ end }}
         - name: torrent
           hostPath:
             path: {{ .Values.persistence.torrent.hostPath }}
-{{ end }}
-      restartPolicy: Always

@@ -1,0 +1,113 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  {{ .Values.appName }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app:  {{ .Values.appName }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Values.appName }}
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app:  {{ .Values.appName }}
+    spec:
+      containers:
+      - name:  {{ .Values.appName }}
+        image:  "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        imagePullPolicy: {{ .Values.image.imagePullPolicy }}
+        resources:
+          requests:
+            cpu: {{ .Values.resources.requests.cpu }}
+            memory: {{ .Values.resources.requests.memory }}
+          limits:
+            cpu: {{ .Values.resources.limits.cpu }}
+            memory: {{ .Values.resources.limits.memory }}
+        env:
+        - name: TZ
+          value: "{{ .Values.env.TZ }}"
+        - name: PUID
+          value: "{{ .Values.env.PUID }}"
+        - name: PGID
+          value: "{{ .Values.env.PGID }}"
+        - name: DOCKER_MODS
+          value: "{{ .Values.env.DOCKER_MODS }}"
+        ports:
+        - containerPort:  {{ .Values.service.port }}
+          name:  {{ .Values.appName }}
+        volumeMounts:
+        - name: config
+          mountPath: {{ .Values.persistence.config.mountPath }}
+{{ if .Values.persistence.backups.enabled }}
+        - name: backups
+          mountPath: {{ .Values.persistence.backups.mountPath }}
+{{ end }}
+{{ if .Values.persistence.books.enabled }}
+        - name: books
+          mountPath: {{ .Values.persistence.books.mountPath }}
+{{ end }}
+{{ if .Values.persistence.audioBooks.enabled }}
+        - name: audiobooks
+          mountPath: {{ .Values.persistence.audiobooks.mountPath }}
+{{ end }}
+{{ if .Values.persistence.torrent.enabled }}
+        - name: torrent
+          mountPath: {{ .Values.persistence.torrent.mountPath }}
+{{ end }}
+{{ if .Values.persistence.news.enabled }}
+        - name: news
+          mountPath: {{ .Values.persistence.news.mountPath }}
+{{ end }}
+{{ if .Values.persistence.customServices.enabled }}
+        - name: custom-services
+          mountPath: {{ .Values.persistence.customServices.mountPath }}
+{{ end }}
+{{ if .Values.persistence.customContInit.enabled }}
+        - name: custom-cont-init
+          mountPath: {{ .Values.persistence.customContInit.mountPath }}
+{{ end }}
+      volumes:
+        - name: config
+          hostPath:
+            path: {{ .Values.persistence.config.hostPath }}
+{{ if .Values.persistence.backups.enabled }}
+        - name: backups
+          persistentVolumeClaim:
+            claimName: {{ .Values.persistence.backups.existingClaim }}
+{{ end }}
+{{ if .Values.persistence.books.enabled }}
+        - name: books
+          persistentVolumeClaim:
+            claimName: {{ .Values.persistence.books.existingClaim }}
+{{ end }}
+{{ if .Values.persistence.audioBooks.enabled }}
+        - name: audiobooks
+          persistentVolumeClaim:
+            claimName: {{ .Values.persistence.audiobooks.existingClaim }}
+{{ end }}
+{{ if .Values.persistence.torrent.enabled }}
+        - name: torrent
+          hostPath:
+            path: {{ .Values.persistence.torrent.hostPath }}
+{{ end }}
+{{ if .Values.persistence.news.enabled }}
+        - name: news
+          hostPath:
+            path: {{ .Values.persistence.news.hostPath }}
+{{ end }}
+{{ if .Values.persistence.customServices.enabled }}
+        - name: custom-services
+          hostPath:
+            path: {{ .Values.persistence.customServices.hostPath }}
+{{ end }}
+{{ if .Values.persistence.customContInit.enabled }}
+        - name: custom-cont-init
+          hostPath:
+            path: {{ .Values.persistence.customContInit.hostPath }}
+{{ end }}
+      restartPolicy: Always

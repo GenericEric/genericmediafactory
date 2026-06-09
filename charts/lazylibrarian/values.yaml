@@ -1,0 +1,62 @@
+appName: lazylibrarian
+namespace: mediafactory
+
+image:
+  repository: lscr.io/linuxserver/lazylibrarian
+  tag: latest
+  imagePullPolicy: IfNotPresent
+
+env:
+  TZ: America/Chicago
+  PGID: 568
+  PUID: 568
+  DOCKER_MODS: "" #optional: "linuxserver/mods:universal-calibre|linuxserver/mods:lazylibrarian-ffmpeg"
+
+ingress:
+  host: lazylibrarian.example.com
+
+service:
+  port: 5299
+
+persistence:
+  config:
+    hostPath:
+    mountPath: /config
+  backups:
+    enabled: false
+    existingClaim:
+    mountPath: /backups
+  books:
+    enabled: false
+    existingClaim:
+    storageClass:
+    mountPath: /media/books
+  audioBooks:
+    enabled: false
+    existingClaim:
+    storageClass:
+    mountPath: /media/audiobooks
+  torrent:
+    enabled: false
+    hostPath:
+    mountPath: /torrent
+  news:
+    enabled: false
+    hostPath:
+    mountPath: /news
+  customServices:
+    enabled: false
+    hostPath:
+    mountPath: /custom-services.d
+  customContInit:
+    enabled: false
+    hostPath:
+    mountPath: /custom-cont-init.d
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 60Mi
+  limits:
+    cpu: 4000m
+    memory: 2000Mi

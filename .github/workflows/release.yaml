@@ -5,19 +5,20 @@ on:
     branches:
       - main
     paths:
-      - 'charts/prowlarr/**'
-      - 'charts/flaresolverr/**'
-      - 'charts/lidarr/**'
-      - 'charts/overseerr/**'
-      - 'charts/qbittorrent/**'
-      - 'charts/radarr/**'
-      - 'charts/readarr/**'
-      - 'charts/sonarr/**'
-      - 'charts/unpackerr/**'
-      - 'charts/sabnzbdvpn/**'
-      - 'charts/jellyseerr/**'
-      - 'charts/wizarr/**'
-      - 'charts/qbittorrent-vpn/**'
+      - "charts/prowlarr/**"
+      - "charts/flaresolverr/**"
+      - "charts/lidarr/**"
+      - "charts/overseerr/**"
+      - "charts/qbittorrent/**"
+      - "charts/radarr/**"
+      - "charts/readarr/**"
+      - "charts/sonarr/**"
+      - "charts/unpackerr/**"
+      - "charts/sabnzbdvpn/**"
+      - "charts/jellyseerr/**"
+      - "charts/wizarr/**"
+      - "charts/qbittorrent-vpn/**"
+      - "charts/lazylibrarian/**"
 
 jobs:
   release:
@@ -32,4 +33,4 @@ jobs:
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@main
         env:
-          CR_TOKEN: '${{ secrets.CR_TOKEN }}'
+          CR_TOKEN: "${{ secrets.CR_TOKEN }}"

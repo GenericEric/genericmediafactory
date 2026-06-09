@@ -53,7 +53,7 @@ spec:
 {{ end }}
 {{ if .Values.persistence.audioBooks.enabled }}
         - name: audiobooks
-          mountPath: {{ .Values.persistence.audiobooks.mountPath }}
+          mountPath: {{ .Values.persistence.audioBooks.mountPath }}
 {{ end }}
 {{ if .Values.persistence.torrent.enabled }}
         - name: torrent
@@ -88,7 +88,7 @@ spec:
 {{ if .Values.persistence.audioBooks.enabled }}
         - name: audiobooks
           persistentVolumeClaim:
-            claimName: {{ .Values.persistence.audiobooks.existingClaim }}
+            claimName: {{ .Values.persistence.audioBooks.existingClaim }}
 {{ end }}
 {{ if .Values.persistence.torrent.enabled }}
         - name: torrent
